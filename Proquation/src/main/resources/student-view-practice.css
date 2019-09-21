@@ -1,0 +1,27 @@
+body {
+    display: block;
+}
+
+.button-panel {
+    height: 100%;
+    width: 40%;
+    display: block;
+    float: left;
+}
+
+.sandbox-result {
+    display: block;
+    width: 60%;
+    height: 100%;
+    float: right;
+}
+
+.sandbox-result .sandbox {
+    height: 60%;
+    width: 100%;
+}
+
+.sandbox-result .result {
+    width: 100%;
+    height: 40%;
+}
