@@ -21,6 +21,7 @@ body {
 .sandbox-result .sandbox {
     height: 60%;
     width: 100%;
+    border-bottom: 3px solid gray;
 }
 
 .sandbox-result .result {
@@ -30,6 +31,7 @@ body {
 
 .button-panel {
 	position: relative;
+	border-right: 3px solid gray;
 }
 .container {
 	width: 100% !important;
