@@ -2,11 +2,12 @@
  * 
  */
 
-var evalStr = '';
-var buttons = document.querySelectorAll(".btn");
-buttons.foreach(item) {
-  item.addEventListener('click',function(){
-      evalStr += item.value;
-      Arthimetic(evalStr);
-  })
-}
+var buttons= document.querySelectorAll(".btn");
+var exp="";
+
+buttons.forEach((button) => {
+  button.addEventListener('click', function(){
+      expression+=button.value;
+      evaluateExpression(exp);
+  });
+});
