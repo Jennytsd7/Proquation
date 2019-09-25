@@ -11,3 +11,8 @@ buttons.forEach((button) => {
       evaluateExpression(exp);
   });
 });
+
+function calcExpression(strEval) {
+	var result = eval(strEval);
+	document.querySelector('.result').textContent = result; 
+}
