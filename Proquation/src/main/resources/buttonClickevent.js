@@ -2,15 +2,11 @@
  * 
  */
 
-var buttons= document.querySelectorAll(".btn");
-var exp="";
-
-buttons.forEach((button) => {
-  button.addEventListener('click', function(){
-      expression+=button.value;
-      evaluateExpression(exp);
-  });
-});
+var evalStr = '';
+var buttons = document.querySelectorAll(".btn");
+function updateStr(str) {
+	evalStr += str;
+}
 
 function calcExpression(strEval) {
 	var result = eval(strEval);
