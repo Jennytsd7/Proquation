@@ -4,11 +4,8 @@
 
 var evalStr = '';
 var buttons = document.querySelectorAll(".btn");
-buttons.foreach(item) {
-  item.addEventListener('click',function(){
-      evalStr += item.value;
-      calcExpression(evalStr);
-  })
+function updateStr(str) {
+	evalStr += str;
 }
 
 function calcExpression(strEval) {
