@@ -28,5 +28,6 @@ document.addEventListener("drop", function(event) {
         //dragged.parentNode.removeChild( dragged );
         let cloneButton = dragged.cloneNode(true);
         event.target.appendChild(cloneButton);
+        updateStr(cloneButton.value);
     }
 }, false);

@@ -57,6 +57,7 @@ body {
 }
 .button-row {
 	margin: 10px 0;
+	display: flex;
 }
 
 .button_heading{
