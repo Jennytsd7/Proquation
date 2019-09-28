@@ -27,6 +27,8 @@ body {
 .sandbox-result .result {
     width: 100%;
     height: 40%;
+    position: relative;
+    top: 50px;
 }
 
 .sandbox-result .sandbox .dragButtons {
@@ -64,8 +66,32 @@ body {
 	text-transform: uppercase;
 	font-size: 20px;
 	font-family: asap, sans-serif;
-	
 }
+
+.result_content{
+	position: relative;
+	font-weight: 100;
+	border: 3px solid #595959;
+	border-radius: 4px;
+	padding: 30px;
+	height: 50px;
+	width: 300px;
+	box-sizing: border-box;
+	text-align: center;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	top: 20%;
+}
+
+    
+.result_heading{
+	text-transform: uppercase;
+	font-size: 20px;
+	font-family: asap, sans-serif;
+	text-align: center;
+}
+
+	
 
 
 
