@@ -10,6 +10,7 @@ function updateStr(str) {
 }
 
 function displayResult(strEval){
+
 	
 	let checkValid = checkValidExpression(strEval);
 	
