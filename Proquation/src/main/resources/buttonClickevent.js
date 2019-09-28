@@ -4,15 +4,8 @@
 var result;
 var evalStr = '';
 var buttons = document.querySelectorAll(".btn");
-buttons.forEach(item => {
-  item.addEventListener('click',function(){
-      evalStr += item.value;
-      calcExpression(evalStr);
-  })
-});
-
-function calcExpression(strEval) {
-	result = eval(strEval);
+function updateStr(str) {
+	evalStr += str;
 	displayResult();
 }
 
@@ -27,9 +20,5 @@ function displayResult(){
 	catch(err){
 		document.getElementById("result_id").innerHTML = err.message;
 	}
-
-    
-	
-
 
 }
