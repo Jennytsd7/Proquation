@@ -29,6 +29,15 @@ body {
     height: 40%;
 }
 
+.sandbox-result .sandbox .dragButtons {
+    height: 100%;
+    width: 100%;
+    position: relative;
+    border: 1px solid black;
+    box-sizing: border-box;
+    padding: 50px;
+}
+
 .button-panel {
 	position: relative;
 	border-right: 3px solid gray;
