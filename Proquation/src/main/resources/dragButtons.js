@@ -1,4 +1,3 @@
-import {updateStr} './buttonClickevent.js';
 var button = document.querySelector('#num_1');
 var container = document.querySelector('.dragButtons');
 
