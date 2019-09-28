@@ -13,12 +13,17 @@ function displayResult(strEval){
 
 	
 	let checkValid = checkValidExpression(strEval);
+	let resultContainer = document.querySelector('.result_content');
 	
-	if(checkValid == 'valid')
-		document.querySelector('.result_content').textContent = result;
+	if(checkValid == 'valid') {
+		if(result != 'Infinity')
+			resultContainer.textContent = result;
+		else
+			resultContainer.textContent = 'Division by 0 not allowed';
+	}
 	
 	else
-		document.querySelector('.result_content').textContent = 'Not a valid expression';
+		resultContainer.textContent = 'Not a valid expression';
 
 }
 
