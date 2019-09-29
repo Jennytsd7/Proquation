@@ -70,10 +70,9 @@ body {
 
 .result_content{
 	position: relative;
-	font-weight: 100;
 	border: 3px solid #595959;
 	border-radius: 4px;
-	padding: 30px;
+	padding: 14px;
 	height: 50px;
 	width: 300px;
 	box-sizing: border-box;
