@@ -6,10 +6,12 @@ var evalStr = '';
 var buttons = document.querySelectorAll(".btn");
 function updateStr(str) {
 	evalStr += str;
+	result = evaluate(evalStr);
 	displayResult(evalStr);
 }
 
 function displayResult(strEval){
+
 	
 	let checkValid = checkValidExpression(strEval);
 	let resultContainer = document.querySelector('.result_content');
