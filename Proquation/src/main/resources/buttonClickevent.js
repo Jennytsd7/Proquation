@@ -4,32 +4,34 @@
 var result;
 var evalStr = '';
 var buttons = document.querySelectorAll(".btn");
-buttons.forEach(item => {
-  item.addEventListener('click',function(){
-      evalStr += item.value;
-      calcExpression(evalStr);
-  })
-});
-
-function calcExpression(strEval) {
-	result = eval(strEval);
-	displayResult();
+function updateStr(str) {
+	evalStr += str;
+	result = evaluate(evalStr);
+	displayResult(evalStr);
 }
 
-function displayResult(){
-	document.querySelector('.result_content').textContent = result;
+function displayResult(strEval){
+
 	
-	//Case where expression is incomplete 
+	let checkValid = checkValidExpression(strEval);
+	let resultContainer = document.querySelector('.result_content');
 	
-	try {
-		adddlert("Improperly formed formula");
+	if(checkValid == 'valid') {
+		if(result != 'Infinity' && !isNaN(result))
+			resultContainer.textContent = result;
+		else
+			resultContainer.textContent = 'Division by 0 not allowed';
 	}
-	catch(err){
-		document.getElementById("result_id").innerHTML = err.message;
-	}
-
-    
 	
+	else
+		resultContainer.textContent = 'Not a valid expression';
 
+}
 
+function checkValidExpression(strCheck){
+	let lastElement = strCheck[strCheck.length - 1];
+	if(lastElement == '+' || lastElement == '-' || lastElement == '*' || lastElement == '/')
+		return 'invalid';
+	else
+		return 'valid';
 }
