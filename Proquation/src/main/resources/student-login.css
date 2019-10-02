@@ -1,9 +1,20 @@
 @import url('https://fonts.googleapis.com/css?family=Asap:400,500,700&display=swap');
 @import url(https://fonts.googleapis.com/css?family=Roboto:300);
+@import url('https://fonts.googleapis.com/css?family=Squada+One&display=swap');
 *
 {
-   font-family: Roboto;
+   font-family: 'Squada One', cursive;
 }
+
+.bgimg{
+	position: relative;
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: round;
+	background-size: cover;
+	background-image: url("../resources/images/maths.jpg");
+  
+  }
 
 .text {
 	color: #f2f2f2;
