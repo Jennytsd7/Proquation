@@ -4,4 +4,14 @@
 
 <web-app>
   <display-name>Archetype Created Web Application</display-name>
+  <servlet>
+  	<servlet-name>StudentRegistrationController</servlet-name>
+  	<display-name>StudentRegistrationController</display-name>
+  	<description></description>
+  	<servlet-class>com.proquation.controller.StudentRegistrationController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>StudentRegistrationController</servlet-name>
+  	<url-pattern>/StudentRegistrationController</url-pattern>
+  </servlet-mapping>
 </web-app>
