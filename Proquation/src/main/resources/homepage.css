@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css?family=Asap:400,500,700&display=swap');
+
+.homepage-container {
+	display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 400px;
+    position: relative;
+}
+
+.homepage-container section {
+	margin: auto 40px;
+}
+
+.homepage-container section h1 {
+	text-align: center;
+	text-transform: uppercase;
+	font-family: asap, sans-serif;
+}
+
+.homepage-container section img {
+	height: 200px;
+	width: 200px;
+	border-radius: 50%;
+	cursor: pointer;
+}
