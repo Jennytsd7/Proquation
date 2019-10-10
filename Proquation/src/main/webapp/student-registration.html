@@ -17,8 +17,7 @@
         <img src="../resources/images/logo.jpg" alt="logo" class = "logo" />
         <h1>Proquation</h1>
    </div>
-     
-  <div align="center">
+   <div align="center">
       <div class="container" style="margin-top:23% " align="center">
           
           <form action="" onsubmit="submitform()">
@@ -36,15 +35,23 @@
     
           <label for="PASS1">RE-ENTER PASSWORD</label>
           <input type="text" id="PASS1" name="PASS1" placeholder="Enter your password again.."> <br>
-    
 
-   <!-- <label for="subject">Your Thoughts</label>
-    <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
-    --> 
-         <input class = "form button" type="submit" name="submit" value="Register">
+          <div class="container" style="margin-top:5% ">
+             <form action="studentregister" onsubmit="submitform()">
+             <h3> Sign Up </h3>
+            
+               <label for="name">NAME</label>
+               <input type="text" id="fname" name="firstname" placeholder="Your first name.."> <br>
+        
+               <label for="uname">USERNAME</label>
+               <input type="text" id="uname" name="username" placeholder="Your username.."> <br>
+              
+               <label for="PASS">PASSWORD</label>
+               <input type="text" id="PASS" name="password" placeholder="Enter your password.."> <br>
+              <input class = "form button" type="submit" name="submit" value="Register">
          </form>
-  <script type="text/javascript">
-   function submitform(){
+     <script type="text/javascript">
+       function submitform(){
                         if((document.getElementById('fname').value.length==0) || (document.getElementById('lname').value.length==0) ||(document.getElementById('Grade').value.length==0) )
                             window.alert("Enter all details!");
                         else
