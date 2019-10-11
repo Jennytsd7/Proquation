@@ -24,6 +24,13 @@ body {
     border-bottom: 3px solid gray;
 }
 
+.sandbox-result .sandbox .sandbox-heading {
+	text-transform: uppercase;
+	font-size: 20px;
+	font-family: asap, sans-serif;
+	text-align: center;
+}
+
 .sandbox-result .result {
     width: 100%;
     height: 40%;
@@ -32,11 +39,11 @@ body {
 }
 
 .sandbox-result .sandbox .dragButtons {
-    height: 100%;
-    width: 100%;
+    height: 70%;
     position: relative;
     border: 1px solid black;
     box-sizing: border-box;
+    margin: 20px 50px;
     padding: 50px;
 }
 
@@ -109,6 +116,10 @@ body {
 	display: inline-block;
     margin-left: 15px;
     text-transform: uppercase;
+}
+
+.clearButton {
+	margin-left: 50px;
 }
 
 
