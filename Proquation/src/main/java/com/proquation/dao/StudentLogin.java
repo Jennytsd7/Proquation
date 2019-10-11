@@ -8,7 +8,7 @@ import java.sql.SQLException;
 public class StudentLogin {
 	
 	
-	public boolean ValidateUser(String username, String password) {
+	public boolean ValidateStudent(String username, String password) {
 		boolean flag = false;
 		String query = "select student_password from students where student_username=?";
 		Connection connection = null;

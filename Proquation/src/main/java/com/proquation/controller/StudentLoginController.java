@@ -24,7 +24,7 @@ public class StudentLoginController extends HttpServlet {
 		String password = request.getParameter("password");
 		String message;
 		StudentLogin login= new StudentLogin();
-		boolean isUserValid = login.ValidateUser(username, password);
+		boolean isUserValid = login.ValidateStudent(username, password);
 		if(isUserValid) {			
 			RequestDispatcher rd = request.getRequestDispatcher("student-home.jsp");
 			rd.forward(request, response);
