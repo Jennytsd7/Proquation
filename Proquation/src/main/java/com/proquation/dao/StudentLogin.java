@@ -10,7 +10,7 @@ public class StudentLogin {
 	
 	public boolean ValidateStudent(String username, String password) {
 		boolean flag = false;
-		String query = "select student_password from students where student_username=?";
+		String query = "select student_password from Student where student_username=?";
 		Connection connection = null;
 		PreparedStatement statement = null;
 		try {
