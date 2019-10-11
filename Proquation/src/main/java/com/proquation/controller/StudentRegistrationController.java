@@ -21,7 +21,6 @@ public class StudentRegistrationController extends HttpServlet {
     }
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		//response.getWriter().append("Served at: ").append(request.getContextPath());
 		String name = request.getParameter("firstname");
 		String username = request.getParameter("username");
 		String grade = request.getParameter("grade");
@@ -30,7 +29,7 @@ public class StudentRegistrationController extends HttpServlet {
 		boolean usernameExists = usernameSearch.CheckUsernameExists(username);
 		if(!usernameExists) {
 			StudentRegistrationDAO studentRegistrationDao = new StudentRegistrationDAO();
-			studentRegistrationDao.registerStudent(name, password, username, grade);
+			studentRegistrationDao.registerStudent(name, username, password, grade);
 		}
 		else
 			response.sendRedirect("student-login.jsp");
