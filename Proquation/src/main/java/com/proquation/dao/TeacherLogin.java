@@ -10,7 +10,7 @@ public class TeacherLogin {
 	
 	public boolean ValidateTeacher(String username, String password) {
 		boolean flag = false;
-		String query = "select teacher_password from teachers where teacher_username=?";
+		String query = "select teacher_password from Teacher where teacher_username=?";
 		Connection connection = null;
 		PreparedStatement statement = null;
 		try {
