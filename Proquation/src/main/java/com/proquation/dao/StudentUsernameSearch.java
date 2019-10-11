@@ -2,21 +2,24 @@ package com.proquation.dao;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 
-public class StudentRegistrationDAO {
-	public void registerStudent(String name, String password, String username, String grade){
-		String query = "insert into student values(?,?,?,?)";
+public class StudentUsernameSearch {
+	public boolean CheckUsernameExists(String username) {
+		boolean flag = false;
+		String query = "select * from students where username=?";
 		Connection connection = null;
 		PreparedStatement statement = null;
 		try {
 			connection = (Connection) DatabaseConnection.getDBConnectionInstance();
 			statement = connection.prepareStatement(query);
-			statement.setString(1,name);
-			statement.setString(2,password);
-			statement.setString(3,username);
-			statement.setString(4,grade);
-			statement.execute();
+			statement.setString(1, username);
+			ResultSet rs = statement.executeQuery();
+			if(rs == null)
+				flag = false;
+			else
+				flag = true;
 		}
 		catch(Exception e) {
 			e.printStackTrace();
@@ -32,6 +35,6 @@ public class StudentRegistrationDAO {
 				e.printStackTrace();
 			}
 		}
-		
+		return flag;
 	}
 }
