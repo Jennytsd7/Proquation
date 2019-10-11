@@ -1,3 +1,8 @@
+<!-- @author Janani Anand
+	 version 1.2
+	 This form displays all the buttons in the buttons panel of Proquation UI
+	 -->
+
 <html>
     <head>
         <link rel="stylesheet" type="text/css" href="./../resources/student-view-practice.css">
@@ -8,7 +13,7 @@
         <img src="../resources/images/logo.jpg" alt="logo" class = "logo" />
         <h1>Proquation</h1>
     </div>
-    
+    	<!--  The buttons panel div class contains digits, operators as buttons in the buttons panel -->
         <div class="button-panel">
         	<div class="container">
         		<div class="button_heading">Digits</div>
@@ -67,17 +72,17 @@
   				</div>
 			</div>
         </div>
-        
+       
         <div class="sandbox-result">
             <div class="sandbox">
             	<div class="dragButtons"></div>
             </div>
             <div class="result">
-            <div class= "result_heading">Result</div>
-            	<div class= "result_content"></div>
+            <div class="result_heading">Result</div>
+            	<div class="result_content"></div>
             </div>
         </div>
-      
+       <!--  The script tags contain the necessary calls to the action listeners for implementing the functionality on click of buttons -->
         <script type="text/javascript" src="../resources/buttonClickevent.js" charset="utf-8"></script>
         <script type="text/javascript" src="../resources/dragButtons.js" charset="utf-8"></script>
         <script type="text/javascript" src="../resources/expressionEvaluator.js" charset="utf-8"></script>
