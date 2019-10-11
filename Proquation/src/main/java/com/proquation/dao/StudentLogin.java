@@ -39,7 +39,6 @@ public class StudentLogin {
 				if(connection != null)
 					connection.close();
 			} catch (SQLException e) {
-				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
 		}

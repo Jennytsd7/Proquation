@@ -20,22 +20,21 @@ public class StudentLoginController extends HttpServlet {
     }
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		//response.getWriter().append("Served at: ").append(request.getContextPath());
 		String username = request.getParameter("username");
 		String password = request.getParameter("password");
 		String message;
 		StudentLogin login= new StudentLogin();
 		boolean isUserValid = login.ValidateUser(username, password);
 		if(isUserValid) {			
-			response.sendRedirect("student-home.jsp");
+			RequestDispatcher rd = request.getRequestDispatcher("student-home.jsp");
+			rd.forward(request, response);
 		}
 		else
 		{
 			message = "Login Failed!! Please check your crendentials";
 			request.setAttribute("message", message);
 			response.sendRedirect("student-login.jsp");
-			RequestDispatcher rd = request.getRequestDispatcher("student-registeres.jsp");
-			rd.forward(request, response);
+			
 		}
 	}
 
