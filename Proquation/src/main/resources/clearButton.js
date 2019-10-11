@@ -1,8 +1,9 @@
 /** The clearButton function clears all the buttons that were dragged into the sandbox panel
  * 
  */
-var sandbox = document.querySelector(".dragButtons");
-var clearButton = document.querySelector(".clearButton");
+const sandbox = document.querySelector(".dragButtons");
+const clearButton = document.querySelector(".clearButton");
+const deleteButton = document.querySelector(".deleteButton");
 
 clearButton.addEventListener("click", () => {
 	if(sandbox.children.length != 0) {
@@ -10,5 +11,12 @@ clearButton.addEventListener("click", () => {
 		buttonsPanel.forEach((element) => {
 			sandbox.removeChild(element);
 		});
+	}
+});
+
+deleteButton.addEventListener("click", () => {
+	if(sandbox.children.length != 0) {
+		let buttonsPanel = sandbox.children;
+		sandbox.removeChild(buttonsPanel[buttonsPanel.length - 1]);
 	}
 });
