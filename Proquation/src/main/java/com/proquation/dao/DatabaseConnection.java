@@ -9,7 +9,7 @@ public class DatabaseConnection {
 	private Connection connection;
 	private String url = "jdbc:mysql://localhost:3306/proquation";
 	private String username = "root";
-	private String password = "root";
+	private String password = "root1234";
 	private DatabaseConnection() throws SQLException {
 		try {
 			Class.forName("com.mysql.jdbc.Driver").newInstance();
