@@ -12,7 +12,7 @@ public class StudentUsernameSearch {
 		Connection connection = null;
 		PreparedStatement statement = null;
 		try {
-			connection = (Connection) DatabaseConnection.getDBConnectionInstance();
+			connection = (Connection) DatabaseConnection.getDBConnectionInstance().getConnection();
 			statement = connection.prepareStatement(query);
 			statement.setString(1, username);
 			ResultSet rs = statement.executeQuery();
