@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css?family=Asap:400,500,700&display=swap');
+
+body {
+    display: block;
+}
+
+.button-panel {
+    height: 100%;
+    width: 40%;
+    display: block;
+    float: left;
+}
+
+.sandbox-result {
+    display: block;
+    width: 60%;
+    height: 100%;
+    float: right;
+}
+
+.sandbox-result .sandbox {
+    height: 60%;
+    width: 100%;
+    border-bottom: 3px solid gray;
+}
+
+.sandbox-result .sandbox .sandbox-heading {
+	text-transform: uppercase;
+	font-size: 20px;
+	font-family: asap, sans-serif;
+	text-align: center;
+}
+
+.sandbox-result .result {
+    width: 100%;
+    height: 40%;
+    position: relative;
+    top: 50px;
+}
+
+.sandbox-result .sandbox .dragButtons {
+    height: 70%;
+    position: relative;
+    border: 1px solid black;
+    box-sizing: border-box;
+    margin: 20px 50px;
+    padding: 50px;
+}
+
+.button-panel {
+	position: relative;
+	border-right: 3px solid gray;
+}
+.container {
+	width: 100% !important;
+	display: flex;
+    flex-direction: column;
+    top: 50%;
+    position: relative;
+    transform: translate(0, -50%);
+    margin: 0;
+    align-items: center;
+}
+.btn {
+	margin: 0 10px;
+}
+.button-row {
+	margin: 10px 0;
+	display: flex;
+}
+
+.button_heading{
+	text-transform: uppercase;
+	font-size: 20px;
+	font-family: asap, sans-serif;
+}
+
+.result_content{
+	position: relative;
+	border: 3px solid #595959;
+	border-radius: 4px;
+	padding: 14px;
+	height: 50px;
+	width: 300px;
+	box-sizing: border-box;
+	text-align: center;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	top: 20%;
+}
+
+    
+.result_heading{
+	text-transform: uppercase;
+	font-size: 20px;
+	font-family: asap, sans-serif;
+	text-align: center;
+}
+
+.header {
+  background-color: #412b3e;
+  text-align: left;
+  padding: 10px;
+}
+.logo{
+	height:60px;
+	width:auto;
+	border: 3px solid white;
+	border-radius:50%;
+	padding: 3px;
+	display: inline
+}
+.header > h1{
+	color:white;
+	font-family: asap, sans-serif;
+	display: inline-block;
+    margin-left: 15px;
+    text-transform: uppercase;
+}
+
+.clearButton {
+	margin-left: 50px;
+}
+
+
+
+
+
+
