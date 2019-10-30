@@ -4,6 +4,11 @@
 var result;
 var evalStr = '';
 var buttons = document.querySelectorAll(".btn");
+
+function updateEvalStr(str) {
+	evalStr = str;
+}
+
 function updateStr(str) {
 	evalStr += str;
 	result = evaluate(evalStr);
