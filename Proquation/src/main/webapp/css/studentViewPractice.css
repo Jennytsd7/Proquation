@@ -4,6 +4,10 @@ body {
     display: block;
 }
 
+.student-practice-body {
+	height: 100vh;
+}
+
 .button-panel {
     height: 100%;
     width: 40%;
