@@ -17,8 +17,10 @@ function displayResult(strEval){
 	if(checkValid == 'valid') {
 		if(result != 'Infinity' && !isNaN(result))
 			resultContainer.textContent = result;
+		else if(result == 'Infinity' && !isNaN(result))
+			resultContainer.textContent = 'Division by 0 not allowed';		
 		else
-			resultContainer.textContent = 'Division by 0 not allowed';
+			resultContainer.textContent = 'Invalid Expression';
 	}
 	
 	else
