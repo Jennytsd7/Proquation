@@ -16,11 +16,10 @@ clearButton.addEventListener("click", () => {
 	}
 });
 
-
-
 deleteButton.addEventListener("click", () => {
 	if(sandbox.children.length != 0) {
 		let buttonsPanel = sandbox.children;
 		sandbox.removeChild(buttonsPanel[buttonsPanel.length - 1]);
+		removeLastfromEvalStr();
 	}
 });

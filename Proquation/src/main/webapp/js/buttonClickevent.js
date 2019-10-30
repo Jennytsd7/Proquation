@@ -15,6 +15,14 @@ function updateStr(str) {
 	displayResult(evalStr);
 }
 
+function removeLastfromEvalStr() {
+	if(evalStr.length > 0) {
+		evalStr = evalStr.slice(0, -1);
+	}
+	result = evaluate(evalStr);
+	displayResult(evalStr);
+}
+
 function displayResult(strEval){
 	let checkValid = checkValidExpression(strEval);
 	let resultContainer = document.querySelector('.result_content');
