@@ -10,9 +10,13 @@ clearButton.addEventListener("click", () => {
 		let buttonsPanel = Array.from(sandbox.children);
 		buttonsPanel.forEach((element) => {
 			sandbox.removeChild(element);
+			updateEvalStr('');
+			updateStr('');
 		});
 	}
 });
+
+
 
 deleteButton.addEventListener("click", () => {
 	if(sandbox.children.length != 0) {
