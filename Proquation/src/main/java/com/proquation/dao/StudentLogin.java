@@ -14,7 +14,7 @@ public class StudentLogin {
 		Connection connection = null;
 		PreparedStatement statement = null;
 		try {
-			connection = (Connection) DatabaseConnection.getDBConnectionInstance();
+			connection = (Connection) DatabaseConnection.getDBConnectionInstance().getConnection();
 			statement = connection.prepareStatement(query);
 			statement.setString(1, username);
 			statement.setString(2, password);
@@ -27,7 +27,7 @@ public class StudentLogin {
 				}
 			}
 			else
-				flag = true;
+				flag = false;
 		}
 		catch(Exception e) {
 			e.printStackTrace();
