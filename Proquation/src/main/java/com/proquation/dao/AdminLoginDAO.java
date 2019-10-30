@@ -5,23 +5,21 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-public class TeacherLogin {
-	
-	
-	public boolean ValidateTeacher(String username, String password) {
+public class AdminLoginDAO {
+	public boolean ValidateAdmin(String username, String password) {
 		boolean flag = false;
-		String query = "select teacher_password from Teacher where teacher_username=?";
+		String query = "select admin_password from Admin where admin_username=?";
 		Connection connection = null;
 		PreparedStatement statement = null;
 		try {
 			connection = (Connection) DatabaseConnection.getDBConnectionInstance().getConnection();
 			statement = connection.prepareStatement(query);
 			statement.setString(1, username);
-			statement.setString(2, password);
 			ResultSet rs = statement.executeQuery();
-			if(rs!=null)
+			if(rs.next())
 			{
-				if(rs.getString("teacher_password")== password)
+				String dbPassword = rs.getString("admin_password");
+				if(dbPassword.equals(password))
 				{
 					flag=true;
 				}
@@ -44,6 +42,5 @@ public class TeacherLogin {
 		}
 		return flag;
 	}
-	
 
 }

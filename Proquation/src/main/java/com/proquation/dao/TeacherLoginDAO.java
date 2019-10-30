@@ -5,10 +5,12 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-public class TeacherUsernameSearch {
-	public boolean CheckUsernameExists(String username) {
+public class TeacherLoginDAO {
+	
+	
+	public boolean ValidateTeacher(String username, String password) {
 		boolean flag = false;
-		String query = "select * from Teacher where teacher_username=?";
+		String query = "select teacher_password from Teacher where teacher_username=?";
 		Connection connection = null;
 		PreparedStatement statement = null;
 		try {
@@ -16,26 +18,32 @@ public class TeacherUsernameSearch {
 			statement = connection.prepareStatement(query);
 			statement.setString(1, username);
 			ResultSet rs = statement.executeQuery();
-			System.out.println(rs);
 			if(rs.next())
-				flag = false;
+			{
+				String dbPassword= rs.getString("teacher_password");
+				if(dbPassword.equals(password))
+				{
+					flag=true;
+				}
+			}
 			else
-				flag = true;
+				flag = false;
 		}
 		catch(Exception e) {
 			e.printStackTrace();
 		}
 		finally {
 			try {
-				if (statement != null)
+				if(statement != null)
 					statement.close();
-				if (connection != null)
+				if(connection != null)
 					connection.close();
 			} catch (SQLException e) {
-				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
 		}
 		return flag;
 	}
+	
+
 }

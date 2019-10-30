@@ -23,7 +23,7 @@
 
 
 	<div class="container" style="margin-top: 5%">
-		<form action="" onsubmit="submitform()">
+		<form action="adminlogin" onsubmit="submitform()">
 			<h3>ADMIN LOGIN</h3><br>
 			<div class="form">
 				<label for="fname">USER NAME</label> <input type="text" id="fname"
@@ -31,7 +31,7 @@
 			</div>
 			<div class="form">
 				<label for="PASS">PASSWORD</label> <input type="text" id="PASS"
-					name="PASS" placeholder="Enter your password">
+					name="password" placeholder="Enter your password">
 			</div>
 			<div class="form">
 				<input class="form button" type="submit" name="submit"

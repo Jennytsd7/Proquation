@@ -16,7 +16,8 @@ public class StudentUsernameSearch {
 			statement = connection.prepareStatement(query);
 			statement.setString(1, username);
 			ResultSet rs = statement.executeQuery();
-			if(rs == null)
+			System.out.println(rs);
+			if(rs.next())
 				flag = false;
 			else
 				flag = true;
