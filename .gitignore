@@ -12,3 +12,5 @@ RemoteSystemsTempFiles/.project
 Proquation/.settings/org.eclipse.wst.validation.prefs
 Proquation/.classpath
 Servers/
+.recommenders/caches/manual-mappings.json
+.recommenders/caches/identified-project-coordinates.json
