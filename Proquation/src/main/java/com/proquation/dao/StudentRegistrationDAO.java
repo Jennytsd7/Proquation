@@ -6,7 +6,7 @@ import java.sql.SQLException;
 
 public class StudentRegistrationDAO {
 	public void registerStudent(String name, String username, String password, String grade){
-		String query = "insert into Student (Student_Name, Student_Username, Student_Password, Student_Grade) values (?,?,?,?)";
+		String query = "insert into Student (student_fullname, student_username, student_password, student_grade) values (?,?,?,?)";
 		Connection connection = null;
 		PreparedStatement statement = null;
 		try {
