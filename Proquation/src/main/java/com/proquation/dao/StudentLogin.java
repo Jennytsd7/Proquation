@@ -27,7 +27,7 @@ public class StudentLogin {
 				}
 			}
 			else
-				flag = true;
+				flag = false;
 		}
 		catch(Exception e) {
 			e.printStackTrace();
