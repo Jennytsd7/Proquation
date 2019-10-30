@@ -8,7 +8,7 @@ import java.sql.SQLException;
 public class StudentUsernameSearch {
 	public boolean CheckUsernameExists(String username) {
 		boolean flag = false;
-		String query = "select * from Student where username=?";
+		String query = "select * from Student where student_username=?";
 		Connection connection = null;
 		PreparedStatement statement = null;
 		try {
