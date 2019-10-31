@@ -14,8 +14,6 @@ clearButton.addEventListener("click", () => {
 		buttonsPanel.forEach((element) => {
 			sandbox.removeChild(element);
 		});
-		let resultContainer = document.querySelector('.result_content');
-		resultContainer.textContent = "";
 	}
 });
 
