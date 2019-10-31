@@ -25,7 +25,7 @@
           	<h3> Sign Up </h3>
           	<div>
             	<label for="name">NAME</label>
-            	<input type="text" id="fname" name="firstname" placeholder="Your first name.."> <br>
+            	<input type="text" id="fname" name="firstname" placeholder="Your Full name.."> <br>
           	</div>
           
           	<div class="form">

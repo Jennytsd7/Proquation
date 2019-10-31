@@ -8,15 +8,13 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import com.proquation.dao.StudentLoginDAO;
+import com.proquation.dao.AdminLoginDAO;
 
-
-@WebServlet("/studentlogin")
-public class StudentLoginController extends HttpServlet {
-	
+@WebServlet("/adminlogin")
+public class AdminLoginController extends HttpServlet{
 	private static final long serialVersionUID = 1L;
-       
-    public StudentLoginController() {
+    
+    public AdminLoginController() {
         super();
     }
 
@@ -24,17 +22,18 @@ public class StudentLoginController extends HttpServlet {
 		String username = request.getParameter("firstname");
 		String password = request.getParameter("password");
 		String message;
-		StudentLoginDAO login= new StudentLoginDAO();
-		boolean isUserValid = login.ValidateStudent(username, password);
+		AdminLoginDAO login= new AdminLoginDAO();
+		boolean isUserValid = login.ValidateAdmin(username, password);
 		if(isUserValid) {			
-			RequestDispatcher rd = request.getRequestDispatcher("studentRegistration.jsp");
+			//for testing
+			RequestDispatcher rd = request.getRequestDispatcher("teacherRegistration.jsp");
 			rd.forward(request, response);
 		}
 		else
 		{
 			message = "Login Failed!! Please check your crendentials";
 			request.setAttribute("message", message);
-			response.sendRedirect("studentLogin.jsp");
+			response.sendRedirect("adminLogin.jsp");
 			
 		}
 	}

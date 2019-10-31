@@ -8,7 +8,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import com.proquation.dao.TeacherLogin;
+import com.proquation.dao.TeacherLoginDAO;
 
 
 @WebServlet("/teacherlogin")
@@ -20,13 +20,13 @@ public class TeacherLoginController extends HttpServlet {
     }
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		String username = request.getParameter("username");
+		String username = request.getParameter("firstname");
 		String password = request.getParameter("password");
 		String message;
-		TeacherLogin login= new TeacherLogin();
+		TeacherLoginDAO login= new TeacherLoginDAO();
 		boolean isUserValid = login.ValidateTeacher(username, password);
 		if(isUserValid) {			
-			RequestDispatcher rd = request.getRequestDispatcher("teacher-home.jsp");
+			RequestDispatcher rd = request.getRequestDispatcher("studentLogin.jsp");
 			rd.forward(request, response);
 		}
 		else

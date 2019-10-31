@@ -5,7 +5,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-public class StudentLogin {
+public class StudentLoginDAO {
 	
 	
 	public boolean ValidateStudent(String username, String password) {
@@ -17,11 +17,11 @@ public class StudentLogin {
 			connection = (Connection) DatabaseConnection.getDBConnectionInstance().getConnection();
 			statement = connection.prepareStatement(query);
 			statement.setString(1, username);
-			statement.setString(2, password);
 			ResultSet rs = statement.executeQuery();
-			if(rs!=null)
+			if(rs.next())
 			{
-				if(rs.getString("student_password")== password)
+				String dbPassword = rs.getString("student_password");
+				if(dbPassword.equals(password))
 				{
 					flag=true;
 				}

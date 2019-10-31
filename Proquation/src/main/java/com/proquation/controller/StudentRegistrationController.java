@@ -21,25 +21,33 @@ public class StudentRegistrationController extends HttpServlet {
     }
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		System.out.println("Inside student controller");
 		String name = request.getParameter("firstname");
 		String username = request.getParameter("username");
 		String grade = request.getParameter("grade");
 		String password = request.getParameter("password");
 		StudentUsernameSearch usernameSearch = new StudentUsernameSearch();
-		boolean usernameExists = usernameSearch.CheckUsernameExists(username);
-		if(!usernameExists) {
+		boolean usernameNotExists = usernameSearch.CheckUsernameExists(username);
+		if(usernameNotExists) {
+			System.out.println("Inside  username student controller");
 			StudentRegistrationDAO studentRegistrationDao = new StudentRegistrationDAO();
 			studentRegistrationDao.registerStudent(name, username, password, grade);
 		}
-		else
-			response.sendRedirect("student-login.jsp");
+		else{
+			System.out.println("Inside  username2 student controller");
+			response.sendRedirect("studentLogin.jsp");
+			
+		}
+			
 		
 		String message = "Student successfully added";
 		request.setAttribute("message", message);
-		RequestDispatcher rd = request.getRequestDispatcher("student-registeres.jsp");
+		RequestDispatcher rd = request.getRequestDispatcher("studentLogin.jsp");
+		System.out.println("Inside student controller end ");
 		rd.forward(request, response);
+		
 	}
-
+	
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		doGet(request, response);
 	}
