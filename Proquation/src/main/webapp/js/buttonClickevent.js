@@ -1,6 +1,9 @@
-/**
- * 
+/** @author Janani Anand
+ *  version 1.3
+ *  This file handles all the exception cases for evaluation logic 
+ *  i.e. Division  by 0, multiple operators, invalid parenthesis, etc.
  */
+
 var result;
 var evalStr = '';
 var buttons = document.querySelectorAll(".btn");
