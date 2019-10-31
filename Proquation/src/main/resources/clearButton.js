@@ -1,5 +1,6 @@
-/** The clearButton function clears all the buttons that were dragged into the sandbox panel
- * 
+/** @author Janani Anand 
+ * version 1.2
+ * The clearButton function clears all the buttons that were dragged into the sandbox panel
  */
 const sandbox = document.querySelector(".dragButtons");
 const clearButton = document.querySelector(".clearButton");
