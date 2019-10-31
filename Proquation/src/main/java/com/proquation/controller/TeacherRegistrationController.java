@@ -27,15 +27,15 @@ public class TeacherRegistrationController extends HttpServlet {
 		String grade = request.getParameter("grade");
 		String password = request.getParameter("password");
 		TeacherUsernameSearch teacherUsernameSearch = new TeacherUsernameSearch();
-		boolean usernameExists = teacherUsernameSearch.CheckUsernameExists(username);
-		if (!usernameExists) {
+		boolean usernameNotExists = teacherUsernameSearch.CheckUsernameExists(username);
+		if (usernameNotExists) {
 			TeacherRegistrationDAO teacherRegistrationDao = new TeacherRegistrationDAO();
 			teacherRegistrationDao.registerTeacher(name, username, password, grade);
 		} else
-			response.sendRedirect("teacher-login.jsp");
+			response.sendRedirect("teacheLogin.jsp");
 		String message = "Teacher successfully added";
 		request.setAttribute("message", message);
-		RequestDispatcher rd = request.getRequestDispatcher("teacher-registeres.jsp");
+		RequestDispatcher rd = request.getRequestDispatcher("teacherLogin.jsp");
 		rd.forward(request, response);
 	}
 
