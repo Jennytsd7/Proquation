@@ -81,7 +81,7 @@
 					<button type="button" id="div_op" class="btn btn-danger btn-lg tile" value="/"
 						draggable="true">/</button>
 				</div>
-
+			</div>
 				<div class="button_heading">Special Symbols</div>
 				<div class="button-row">
 					<div class="tile-wrapper">
@@ -91,22 +91,6 @@
 					<div class="tile-wrapper">
 						<button type="button" id="right_paren" class="btn btn-success btn-lg tile" value=")"
 							draggable="true">)</button>
-					</div>
-					<div class="tile-wrapper">
-						<button type="button" id="left_paren" class="btn btn-success btn-lg tile" value="["
-							draggable="true">[</button>
-					</div>
-					<div class="tile-wrapper">
-						<button type="button" id="right_paren" class="btn btn-success btn-lg tile" value="]"
-							draggable="true">]</button>
-					</div>
-					<div class="tile-wrapper">
-						<button type="button" id="left_paren" class="btn btn-success btn-lg tile" value="{"
-							draggable="true">{</button>
-					</div>
-					<div class="tile-wrapper">
-						<button type="button" id="right_paren" class="btn btn-success btn-lg tile" value="}"
-							draggable="true">}</button>
 					</div>
 				</div>
 			</div>
