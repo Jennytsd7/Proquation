@@ -1,5 +1,11 @@
 package com.proquation.dao;
 
+
+/** @author Raghavan Sreenivasa
+ *  version 1.0
+ *  This is a singleton class to create database connection
+ */
+
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;

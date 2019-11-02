@@ -7,7 +7,7 @@ import com.proquation.bean.Student;
 import com.proquation.bean.StudentHighGrade;
 import com.proquation.bean.StudentLowGrade;
 public class StudentLoginDAO {
- //Author : Rahul Suresh
+ //Author : Rahul Suresh, Raghavan Sreenivasa
     
     public Student ValidateStudent(String username, String password) {
         boolean flag = false;

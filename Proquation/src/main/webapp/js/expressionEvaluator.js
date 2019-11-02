@@ -1,5 +1,6 @@
-/**
- * 
+/** @author Raghavan Sreenivasa
+ *  version 1.0
+ *  This is to evaluate the expression created by the student
  */
 //Function to find precedence of the operator
 function precedence(op) {

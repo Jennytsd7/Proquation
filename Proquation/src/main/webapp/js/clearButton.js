@@ -1,4 +1,4 @@
-/** @author Janani Anand
+/** @author Janani Anand, Raghavan Sreenivasa
  * 	version 1.2 
  *  The clearButton function clears all the buttons that were dragged into the sandbox panel
  * 

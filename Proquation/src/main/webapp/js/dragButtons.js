@@ -1,3 +1,8 @@
+/** @author Swarnalatha Sreenigarajan, Raghavan Sreenivasa
+ *  version 1.0
+ *  This handles draggable functionality of buttons
+ */
+
 var button = document.querySelector('#num_1');
 var container = document.querySelector('.dragButtons');
 

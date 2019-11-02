@@ -1,4 +1,10 @@
 package com.proquation.controller;
+
+/** @author Swarnalatha Sreenigarajan, Raghavan Sreenivasa
+ *  version 1.0
+ *  This is a controller class to handle student login functionalities
+ */
+
 import java.io.IOException;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;

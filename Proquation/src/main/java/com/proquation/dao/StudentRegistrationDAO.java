@@ -3,7 +3,7 @@ package com.proquation.dao;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
-//Author name: Rahul Suresh
+//Author name: Rahul Suresh, Raghavan Sreenivasa
 public class StudentRegistrationDAO {
 	public void registerStudent(String name, String username, String password, String grade){
 		String query = "insert into Student (student_fullname, student_username, student_password, student_grade) values (?,?,?,?)";
