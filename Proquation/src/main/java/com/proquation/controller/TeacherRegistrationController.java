@@ -11,7 +11,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import com.proquation.dao.TeacherRegistrationDAO;
 import com.proquation.dao.TeacherUsernameSearch;
-
+//Author name: Rahul Suresh
 @WebServlet("/teacherregister")
 public class TeacherRegistrationController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
