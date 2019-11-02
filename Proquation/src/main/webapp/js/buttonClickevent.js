@@ -35,6 +35,8 @@ function displayResult(strEval){
 			resultContainer.textContent = '';
 		else if(result != 'Infinity' && !isNaN(result))
 			resultContainer.textContent = result;
+		else if(isNaN(result))
+			resultContainer.textContent = "Not a valid expression";
 		else
 			resultContainer.textContent = 'Division by 0 not allowed';
 	}

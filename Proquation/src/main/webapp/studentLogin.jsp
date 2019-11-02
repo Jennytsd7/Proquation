@@ -36,7 +36,7 @@
                     name="firstname" placeholder="Enter your username">
             </div>
             <div class="form">
-                <label for="PASS">PASSWORD</label> <input type="text" id="PASS"
+                <label for="PASS">PASSWORD</label> <input type="password" id="PASS"
                     name="password" placeholder="Enter your password">
             </div>
             <div class="form">
