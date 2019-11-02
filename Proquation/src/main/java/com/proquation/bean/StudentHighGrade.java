@@ -1,4 +1,10 @@
 package com.proquation.bean;
+
+/** @author Raghavan Sreenivasa
+ *  version 1.0
+ *  This is a Java bean class for student belonging to grade 4 and higher
+ */
+
 public class StudentHighGrade implements Student {
     private String studentFullname;
     private String studentUsername;

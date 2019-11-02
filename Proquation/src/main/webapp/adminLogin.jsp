@@ -3,8 +3,8 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<!-- Author name:
-Co-author name: Rahul Suresh -->
+<!-- Author name: Janani Anand
+Co-author name: Rahul Suresh, Raghavan Sreenivasa -->
 <meta charset="UTF-8">
 <title>Admin Login Form</title>
 <link rel="stylesheet"

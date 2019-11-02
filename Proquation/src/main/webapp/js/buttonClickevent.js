@@ -1,4 +1,4 @@
-/** @author Janani Anand
+/** @author Janani Anand, Raghavan Sreenivasa
  *  version 1.3
  *  This file handles all the exception cases for evaluation logic 
  *  i.e. Division  by 0, multiple operators, invalid parenthesis, etc.

@@ -1,5 +1,10 @@
 package com.proquation.controller;
 
+/** @author Raghavan Sreenivasa
+ *  version 1.0
+ *  This is a controller class to handle student registration functionalities
+ */
+
 import java.io.IOException;
 
 import javax.servlet.RequestDispatcher;
