@@ -2,7 +2,7 @@ package com.proquation.dao;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
-
+//AUthor name : Rahul Suresh
 public class TeacherRegistrationDAO {
 	public void registerTeacher(String name, String username, String password, String grade){
 		String query = "insert into Teacher (teacher_fullname, teacher_username, teacher_password, teacher_grade) values (?,?,?,?)";

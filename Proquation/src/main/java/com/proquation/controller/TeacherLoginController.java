@@ -10,7 +10,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import com.proquation.dao.TeacherLoginDAO;
 
-
+// Author name: Rahul Suresh
 @WebServlet("/teacherlogin")
 public class TeacherLoginController extends HttpServlet {
 	private static final long serialVersionUID = 1L;

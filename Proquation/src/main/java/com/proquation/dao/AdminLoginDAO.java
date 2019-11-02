@@ -4,7 +4,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-
+//Author : Rahul Suresh
 public class AdminLoginDAO {
 	public boolean ValidateAdmin(String username, String password) {
 		boolean flag = false;
