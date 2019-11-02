@@ -1,12 +1,11 @@
 package com.proquation.dao;
-
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
-//Author name: Rahul Suresh
-public class StudentRegistrationDAO {
-	public void registerStudent(String name, String username, String password, String grade){
-		String query = "insert into Student (student_fullname, student_username, student_password, student_grade) values (?,?,?,?)";
+//AUthor name : Rahul Suresh
+public class TeacherRegistrationDAO {
+	public void registerTeacher(String name, String username, String password, String grade){
+		String query = "insert into Teacher (teacher_fullname, teacher_username, teacher_password, teacher_grade) values (?,?,?,?)";
 		Connection connection = null;
 		PreparedStatement statement = null;
 		try {

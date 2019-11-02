@@ -4,8 +4,8 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-
-public class TeacherLogin {
+//Author name: Rahul Suresh
+public class TeacherLoginDAO {
 	
 	
 	public boolean ValidateTeacher(String username, String password) {
@@ -14,14 +14,14 @@ public class TeacherLogin {
 		Connection connection = null;
 		PreparedStatement statement = null;
 		try {
-			connection = (Connection) DatabaseConnection.getDBConnectionInstance();
+			connection = (Connection) DatabaseConnection.getDBConnectionInstance().getConnection();
 			statement = connection.prepareStatement(query);
 			statement.setString(1, username);
-			statement.setString(2, password);
 			ResultSet rs = statement.executeQuery();
-			if(rs!=null)
+			if(rs.next())
 			{
-				if(rs.getString("teacher_password")== password)
+				String dbPassword= rs.getString("teacher_password");
+				if(dbPassword.equals(password))
 				{
 					flag=true;
 				}

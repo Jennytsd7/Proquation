@@ -1,44 +1,45 @@
-<!DOCTYPE html>
-
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
+<!-- Author name:
+Co-author name: Rahul Suresh -->
 <meta charset="UTF-8">
-<title>Teacher Login Form</title>
+<title>Admin Login Form</title>
 <link rel="stylesheet"
 	href="https://fonts.googleapis.com/css family=Lobster">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet"
 	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
 <link rel="stylesheet" type="text/css"
-	href="./../resources/teacherLogin.css">
+	href="/Proquation/css/studentLogin.css">
 <link rel="stylesheet"
 	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
-
 </head>
-
 <body class="bgimg">
 	<div class="header">
-		<img src="../resources/images/logo.jpg" alt="logo" class="logo" />
+		<img src="/Proquation/images/logo.jpg" alt="logo" class="logo" />
 		<h1>Proquation</h1>
 	</div>
 
 
 	<div class="container" style="margin-top: 5%">
-		<form action="" onsubmit="submitform()">
-			<h3>TEACHER LOGIN</h3><br>
+		<form action="adminlogin" onsubmit="submitform()">
+			<h3>ADMIN LOGIN</h3><br>
 			<div class="form">
 				<label for="fname">USER NAME</label> <input type="text" id="fname"
 					name="firstname" placeholder="Enter your username">
 			</div>
 			<div class="form">
-				<label for="PASS">PASSWORD</label> <input type="text" id="PASS"
-					name="PASS" placeholder="Enter your password">
+				<label for="PASS">PASSWORD</label> <input type="password" id="PASS"
+					name="password" placeholder="Enter your password">
 			</div>
 			<div class="form">
 				<input class="form button" type="submit" name="submit"
 					value="Submit">
 			</div>
-	</form>
+		</form>
 	</div>
 	
 	<script type="text/javascript">

@@ -4,6 +4,10 @@ body {
     display: block;
 }
 
+.student-practice-body {
+	height: 100vh;
+}
+
 .button-panel {
     height: 100%;
     width: 40%;
@@ -69,10 +73,19 @@ body {
 	display: flex;
 }
 
+.section {
+	  margin-bottom: 25px;
+}
+
+.center {
+	margin: auto;
+}
+
 .button_heading{
 	text-transform: uppercase;
 	font-size: 20px;
 	font-family: asap, sans-serif;
+	text-align: center;
 }
 
 .result_content{
