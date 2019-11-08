@@ -1,5 +1,6 @@
 <!-- Author name: Raghavan Sreenivasa
 Co-author name: Janani Anand, Swarnalatha Sreenigarajan -->
+<%@page import="com.proquation.bean.Student"%>
 <%@include file="/header.jsp" %>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
@@ -9,6 +10,8 @@ Co-author name: Janani Anand, Swarnalatha Sreenigarajan -->
 	<link rel="stylesheet" type="text/css" href="/Proquation/css/studentViewPractice.css">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
 </head>
+<%Student student = (Student) request.getAttribute("student");
+	String grade = student.getStudentGrade(); %>
 <body class="student-practice-body">
 	<div class="button-panel">
 		<div class="container">
@@ -65,7 +68,6 @@ Co-author name: Janani Anand, Swarnalatha Sreenigarajan -->
 			<div class="section">
 			</div>
 			<!-- </div> -->
-			
 			<div class="section">
 				<div class="button_heading">Operators</div>
 				<div class="button-row">
@@ -77,6 +79,9 @@ Co-author name: Janani Anand, Swarnalatha Sreenigarajan -->
 						<button type="button" id="minus_op" class="btn btn-danger btn-lg tile" value="-"
 							draggable="true">-</button>
 					</div>
+					<%
+						if(grade.equalsIgnoreCase("4")) {
+					%>
 					<div class="tile-wrapper">
 						<button type="button" id="multiply_op" class="btn btn-danger btn-lg tile" value="*"
 							draggable="true">*</button>
@@ -85,9 +90,12 @@ Co-author name: Janani Anand, Swarnalatha Sreenigarajan -->
 						<button type="button" id="div_op" class="btn btn-danger btn-lg tile" value="/"
 							draggable="true">/</button>
 					</div>
+					<%} %>
 				</div>
 			</div>
-			
+			<% 
+	 			if(grade.equalsIgnoreCase("4")) {
+	 		%>
 			<div class="section">
 				<div class="button_heading">Special Symbols</div>
 				<div class="button-row text-center">
@@ -101,6 +109,7 @@ Co-author name: Janani Anand, Swarnalatha Sreenigarajan -->
 					</div>
 				</div>
 			</div>
+			<%}%>
 		</div>
 	</div>
 
