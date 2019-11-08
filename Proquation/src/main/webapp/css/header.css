@@ -29,3 +29,6 @@
     text-transform: uppercase;
     vertical-align: text-bottom;
 }
+.header a {
+	text-decoration: none;
+}

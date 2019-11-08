@@ -10,8 +10,10 @@
 </head>
 <body>
 	<div class="header">
-        <img src="/Proquation/images/logo.jpg" alt="logo" class = "logo" />
-        <h1 class="title">Proquation</h1>
+		<a href="/Proquation">
+        	<img src="/Proquation/images/logo.jpg" alt="logo" class = "logo"/>
+        	<h1 class="title">Proquation</h1>
+        </a>
     </div>
 </body>
 </html>
