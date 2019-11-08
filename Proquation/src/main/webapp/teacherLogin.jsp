@@ -25,8 +25,8 @@ Co-author name: Rahul Suresh -->
 	</div>
 
 
-	<div class="container" style="margin-top: 5%">
-		<form action="" onsubmit="submitform()">
+	<div class="container">
+		<form action="" onsubmit="submitform()" method="post">
 			<h3>TEACHER LOGIN</h3><br>
 			<div class="form">
 				<label for="fname">USER NAME</label> <input type="text" id="fname"

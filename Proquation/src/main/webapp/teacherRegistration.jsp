@@ -28,7 +28,7 @@ Co-author name: Rahul Suresh -->
 	<div align="center">
 		<div class="container" align="center">
 
-			<form action="teacherregister" onsubmit="submitform()">
+			<form action="teacherregister" onsubmit="submitform()" method="post">
 				<h4>TEACHER REGISTRATION FORM</h4>
 				<div>
 					<label for="name">NAME</label> <input type="text" id="fname"
@@ -50,6 +50,7 @@ Co-author name: Rahul Suresh -->
 					id="PASS1" name="PASS1" placeholder="Enter your password again">
 				<input class="form button" type="submit" name="submit"
 					value="Register">
+			</form>
 		</div>
 	</div>
 	<script type="text/javascript">

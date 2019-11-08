@@ -24,8 +24,8 @@ Co-author name: Rahul Suresh -->
         <img src="/Proquation/images/logo.jpg" alt="logo" class="logo" />
         <h1>Proquation</h1>
     </div>
-    <div class="container" style="margin-top: 5%">
-        <form action="studentlogin" onsubmit="submitform()">
+    <div class="container">
+        <form action="studentlogin" onsubmit="submitform()" method="post">
         <%
            String errorMessage = (String)request.getAttribute("errorMessage");
            if (errorMessage != null) {

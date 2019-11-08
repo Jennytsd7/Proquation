@@ -24,8 +24,8 @@ Co-author name: Rahul Suresh, Raghavan Sreenivasa -->
 	</div>
 
 
-	<div class="container" style="margin-top: 5%">
-		<form action="adminlogin" onsubmit="submitform()">
+	<div class="container">
+		<form action="adminlogin" onsubmit="submitform()" method="post">
 			<h3>ADMIN LOGIN</h3><br>
 			<div class="form">
 				<label for="fname">USER NAME</label> <input type="text" id="fname"

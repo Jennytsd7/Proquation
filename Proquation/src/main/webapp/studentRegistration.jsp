@@ -23,7 +23,7 @@ Co-author name: Rahul Suresh, Raghavan Sreenivasa -->
    </div>
    <div align="center">
       <div class="container"  align="center">
-          <form action="studentregister" onsubmit="submitform()">
+          <form action="studentregister" onsubmit="submitform()" method="post">
           	<h3> Sign Up </h3>
           	<div>
             	<label for="name">NAME</label>
