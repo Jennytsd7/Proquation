@@ -1,5 +1,6 @@
 <!-- Author name: Raghavan Sreenivasa
 Co-author name: Janani Anand, Swarnalatha Sreenigarajan -->
+<%@include file="/header.jsp" %>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
@@ -9,11 +10,6 @@ Co-author name: Janani Anand, Swarnalatha Sreenigarajan -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
 </head>
 <body class="student-practice-body">
-	<div class="header">
-		<img src="/Proquation/images/logo.jpg" alt="logo" class="logo" />
-		<h1>Proquation</h1>
-	</div>
-
 	<div class="button-panel">
 		<div class="container">
 			<!-- <div class="section"> -->

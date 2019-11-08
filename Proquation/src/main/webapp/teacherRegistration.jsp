@@ -1,10 +1,12 @@
+<!-- Author name: Janani Anand
+Co-author name: Rahul Suresh 
+Version 1.0 -->
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
+<%@include file="/header.jsp" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<!-- Author name: Janani Anand
-Co-author name: Rahul Suresh -->
 <meta charset="UTF-8">
 <title>Teacher Registration</title>
 <link rel="stylesheet" href="tempcss.css">
@@ -21,14 +23,10 @@ Co-author name: Rahul Suresh -->
 	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
 </head>
 <body class="bgimg">
-	<div class="header">
-		<img src="/Proquation/images/logo.jpg" alt="logo" class="logo" />
-		<h1>Proquation</h1>
-	</div>
 	<div align="center">
 		<div class="container" align="center">
 
-			<form action="teacherregister" onsubmit="submitform()">
+			<form action="teacherregister" onsubmit="submitform()" method="post">
 				<h4>TEACHER REGISTRATION FORM</h4>
 				<div>
 					<label for="name">NAME</label> <input type="text" id="fname"
@@ -50,6 +48,7 @@ Co-author name: Rahul Suresh -->
 					id="PASS1" name="PASS1" placeholder="Enter your password again">
 				<input class="form button" type="submit" name="submit"
 					value="Register">
+			</form>
 		</div>
 	</div>
 	<script type="text/javascript">
