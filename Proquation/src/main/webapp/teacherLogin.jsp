@@ -1,10 +1,12 @@
+<!-- Author name: Janani Anand
+Co-author name: Rahul Suresh 
+Version 1.0 -->
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+<%@include file="/header.jsp" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<!-- Author name: Janani Anand
-Co-author name: Rahul Suresh -->
 <meta charset="UTF-8">
 <title>Teacher Login Form</title>
 <link rel="stylesheet"
@@ -19,12 +21,6 @@ Co-author name: Rahul Suresh -->
 
 </head>
 <body class="bgimg">
-	<div class="header">
-		<img src="/Proquation/images/logo.jpg" alt="logo" class="logo" />
-		<h1>Proquation</h1>
-	</div>
-
-
 	<div class="container">
 		<form action="" onsubmit="submitform()" method="post">
 			<h3>TEACHER LOGIN</h3><br>

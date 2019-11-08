@@ -1,6 +1,7 @@
 <!-- Author name: Swarnalatha Sreenigarajan
 Co-author name: Raghavan Sreenivasa -->
 <%@ taglib prefix = "c" uri = "http://java.sun.com/jsp/jstl/core" %>
+<%@include file="/header.jsp" %>
 <html>
 <head>
 	<link rel="stylesheet" type="text/css"
@@ -9,10 +10,6 @@ Co-author name: Raghavan Sreenivasa -->
 	href="/Proquation/css/studentViewPractice.css"/>
 </head>
 <body>
-	<div class="header">
-        <img src="/Proquation/images/logo.jpg" alt="logo" class = "logo" />
-        <h1>Proquation</h1>
-    </div>
 	<div class="homepage-container">
 		<section class="student-section">
 			<h1>Student</h1>
