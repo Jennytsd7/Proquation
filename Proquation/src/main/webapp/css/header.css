@@ -1,0 +1,31 @@
+/** @author Raghavan Sreenivasa
+ *  version 1.0
+ *  CSS file for header
+ */
+@CHARSET "ISO-8859-1";
+
+@import url('https://fonts.googleapis.com/css?family=Asap:400,500,700&display=swap');
+
+.header {
+  background-color: #412b3e;
+  text-align: left;
+  padding: 10px;
+}
+.logo{
+	height:60px;
+	width:auto;
+	border: 3px solid white;
+	border-radius:50%;
+	padding: 3px;
+	display: inline
+}
+.header .title{
+	color:white;
+	font-family: asap, sans-serif;
+	font-weigth: 500;
+	font-size: 32px;
+	display: inline-block;
+    margin-left: 15px;
+    text-transform: uppercase;
+    vertical-align: text-bottom;
+}

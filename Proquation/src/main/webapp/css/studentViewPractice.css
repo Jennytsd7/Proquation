@@ -114,33 +114,6 @@ body {
 	text-align: center;
 }
 
-.header {
-  background-color: #412b3e;
-  text-align: left;
-  padding: 10px;
-}
-.logo{
-	height:60px;
-	width:auto;
-	border: 3px solid white;
-	border-radius:50%;
-	padding: 3px;
-	display: inline
-}
-.header > h1{
-	color:white;
-	font-family: asap, sans-serif;
-	display: inline-block;
-    margin-left: 15px;
-    text-transform: uppercase;
-}
-
 .clearButton {
 	margin-left: 50px;
 }
-
-
-
-
-
-
