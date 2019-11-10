@@ -28,7 +28,7 @@ Version 1.0 -->
            String errorMessage = (String)request.getAttribute("errorMessage");
            if (errorMessage != null) {
            out.println(errorMessage);
-       }
+       	}
        %>
             <h3>LOGIN</h3>
             <div class="form">

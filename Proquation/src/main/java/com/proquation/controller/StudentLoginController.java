@@ -22,19 +22,19 @@ public class StudentLoginController extends HttpServlet {
        super();
    }
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        String username = request.getParameter("firstname");
+    	String username = request.getParameter("firstname");
         String password = request.getParameter("password");
         String message;
         StudentLoginDAO login= new StudentLoginDAO();
         Student student = login.ValidateStudent(username, password);
        if(student != null) {
            request.setAttribute("student", student);
-           RequestDispatcher rd = request.getRequestDispatcher("studentViewPractice.jsp");
+           RequestDispatcher rd = request.getRequestDispatcher("studentLanding.jsp");
            rd.forward(request, response);
         }
         else
         {
-            message = "Login Failed!! Please check your crendentials";
+           message = "Login Failed!! Please check your crendentials";
            request.setAttribute("errorMessage", message);
            request.getRequestDispatcher("studentLogin.jsp").forward(request, response);
         }
