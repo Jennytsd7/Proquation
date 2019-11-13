@@ -10,19 +10,13 @@ Version 1.0
 <head>
 <meta charset="UTF-8">
 <title>Student Registration</title>
-<link rel="stylesheet" href="tempcss.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lobster">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel="stylesheet" type="text/css" href="/Proquation/css/studentViewPractice.css">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
-<link rel="stylesheet" type="text/css" href="/Proquation/css/studentLogin.css">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">	
+<link rel="stylesheet" type="text/css" href="/Proquation/css/studentLogin.css">	
 
 </head>
 <body class="bgimg">
    <div align="center">
       <div class="container"  align="center">
-          <form action="studentregister" onsubmit="submitform()" method="post">
+          <form action="studentregister" onsubmit="return submitform()" method="post">
           	<h3> Sign Up </h3>
           	<div>
             	<label for="name">NAME</label>
@@ -49,10 +43,13 @@ Version 1.0
 		  </form>
 		<script type="text/javascript">
        		function submitform(){
-            	if((document.getElementById('fname').value.length==0) || (document.getElementById('lname').value.length==0) ||(document.getElementById('Grade').value.length==0) )
-                	window.alert("Enter all details!");
+            	if((document.getElementById('fname').value.length==0) || (document.getElementById('uname').value.length==0) ||(document.getElementById('Grade').value.length==0) ) {
+            		window.alert("Enter all details!");
+            		return false;
+            	}
                 else
-                    window.alert("Welcome to Proquation!");
+                	window.alert("Success");
+                    return true;
                 }
   		</script>
 		</div>

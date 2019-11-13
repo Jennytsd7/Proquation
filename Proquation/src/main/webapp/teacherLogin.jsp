@@ -9,15 +9,8 @@ Version 1.0 -->
 <head>
 <meta charset="UTF-8">
 <title>Teacher Login Form</title>
-<link rel="stylesheet"
-	href="https://fonts.googleapis.com/css family=Lobster">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel="stylesheet"
-	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
 <link rel="stylesheet" type="text/css"
 	href="/Proquation/css/studentLogin.css">
-<link rel="stylesheet"
-	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
 
 </head>
 <body class="bgimg">
