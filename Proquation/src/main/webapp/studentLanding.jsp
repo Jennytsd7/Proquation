@@ -1,4 +1,3 @@
-
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
 <!-- Author name: Swarnalatha Srenigarajan -->
@@ -15,15 +14,16 @@
 	href="/Proquation/css/studentLanding.css">
 </head>
 <body>
-<%Student student = (Student) request.getSession().getAttribute("student");
+<%Student student = (Student) request.getAttribute("student");
 	String grade = student.getStudentGrade(); 
-	request.setAttribute("student", student);
 	String username = student.getStudentUsername();
 	boolean userFlag = true;
 	request.getSession().removeAttribute("username");
 	request.getSession().removeAttribute("userFlag");
 	request.getSession().setAttribute("username", username);
 	request.getSession().setAttribute("userFlag", userFlag);
+	request.getSession().setAttribute("student", student);
+	setSession(request);
 %>
 	<div class="student-landing-container">
 		<section class="student-practice-section">
