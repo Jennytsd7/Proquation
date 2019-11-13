@@ -40,8 +40,9 @@ public class StudentRegistrationController extends HttpServlet {
 		}
 		else{
 			System.out.println("Inside  username2 student controller");
-			response.sendRedirect("studentLogin.jsp");
-			
+			String message = "Enter a different username";
+			request.setAttribute("errorMessage", message);
+			request.getRequestDispatcher("studentRegistration.jsp").forward(request, response);
 		}
 			
 		
@@ -49,7 +50,6 @@ public class StudentRegistrationController extends HttpServlet {
 		request.setAttribute("message", message);
 		RequestDispatcher rd = request.getRequestDispatcher("studentLogin.jsp");
 		System.out.println("Inside student controller end ");
-		rd.forward(request, response);
 		
 	}
 	
