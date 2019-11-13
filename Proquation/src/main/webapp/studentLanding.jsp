@@ -1,6 +1,10 @@
+
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
 <!-- Author name: Swarnalatha Srenigarajan -->
+<!-- Co-Author name: Janani Anand -->
+<!-- version: 1.1 -->
+<%@page import="com.proquation.bean.Student"%>
 <%@include file="/header.jsp" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
@@ -11,6 +15,10 @@
 	href="/Proquation/css/studentLanding.css">
 </head>
 <body>
+<%Student student = (Student) request.getAttribute("student");
+	String grade = student.getStudentGrade(); 
+	request.setAttribute("student", student);	
+%>
 	<div class="student-landing-container">
 		<section class="student-practice-section">
 			<h1>Practice Mode</h1>
