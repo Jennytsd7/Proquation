@@ -6,8 +6,6 @@ Co-author name: Raghavan Sreenivasa -->
 <head>
 	<link rel="stylesheet" type="text/css"
 	href="/Proquation/css/homepage.css"/>
-	<link rel="stylesheet" type="text/css"
-	href="/Proquation/css/studentViewPractice.css"/>
 </head>
 <body>
 	<div class="homepage-container">

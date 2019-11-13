@@ -10,6 +10,23 @@
    font-family: 'Asap', sans-serif;
 }
 
+.student-reg-link {
+	text-decoration: none;
+	color: blue;
+}
+
+.student-reg-link:visited {
+	color: blue;
+}
+
+.student-reg-link:hover {
+	cursor: pointer;
+}
+
+h3, div {
+	font-family: 'Asap', sans-serif;
+}
+
 .bgimg{
 	position: relative;
 	background-attachment: fixed;
