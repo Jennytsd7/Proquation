@@ -5,7 +5,7 @@
 @CHARSET "ISO-8859-1";
 @import url('https://fonts.googleapis.com/css?family=Asap:400,500,700&display=swap');
 
-.teacher-landing-container {
+.student-landing-container {
 	display: flex;
 	align-items: center;
     justify-content: center;
@@ -13,20 +13,20 @@
     position: relative;
 }
 
-.teacher-landing-container section {
+.student-landing-container section {
 	margin: auto 20px;
 	width: 30%;
 	text-align: center;
 	box-sizing: border-box;
 }
 
-.teacher-landing-container section h1 {
+.student-landing-container section h1 {
 	text-align: center;
 	text-transform: uppercase;
 	font-family: asap, sans-serif;
 }
 
-.teacher-landing-container section img {
+.student-landing-container section img {
 	height: 200px;
 	width: 200px;
 	border-radius: 50%;

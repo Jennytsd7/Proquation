@@ -12,12 +12,18 @@
 </head>
 <body>
 	<div class="student-landing-container">
+		<section class="student-practice-section">
+			<h1>Practice Mode</h1>
+			<a href="studentViewPractice.jsp">
+				<img src="/Proquation/images/practice-img.jpg" alt="student"/>
+			</a>
+		</section>
 		<section class="student-quiz-section">
 			<h1>Take a Quiz</h1>
-			<a href="postQuiz.jsp">
+			<a href="takeQuiz.jsp">
 				<img src="/Proquation/images/quiz-img.png" alt="student"/>
 			</a>
 		</section>
-		</div>
+	</div>
 </body>
 </html> 
