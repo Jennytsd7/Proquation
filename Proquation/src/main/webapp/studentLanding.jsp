@@ -21,6 +21,11 @@
 				<img src="/Proquation/images/quiz-img.png" alt="student"/>
 			</a>
 		</section>
+		<button type="button" class="btn btn-danger clearButton">
+		<a href="studentViewPractice.jsp">
+			Practise now!
+		</a>
+		</button>
 		</div>
 </body>
 </html> 
