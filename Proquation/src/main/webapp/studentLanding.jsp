@@ -17,7 +17,13 @@
 <body>
 <%Student student = (Student) request.getSession().getAttribute("student");
 	String grade = student.getStudentGrade(); 
-	request.setAttribute("student", student);	
+	request.setAttribute("student", student);
+	String username = student.getStudentUsername();
+	boolean userFlag = true;
+	request.getSession().removeAttribute("username");
+	request.getSession().removeAttribute("userFlag");
+	request.getSession().setAttribute("username", username);
+	request.getSession().setAttribute("userFlag", userFlag);
 %>
 	<div class="student-landing-container">
 		<section class="student-practice-section">

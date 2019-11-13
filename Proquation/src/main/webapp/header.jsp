@@ -8,12 +8,32 @@
 <link rel="stylesheet" type="text/css"
 	href="/Proquation/css/header.css"/>
 </head>
+<%
+	if((String)request.getSession().getAttribute("username") == null) {
+		boolean userFlag = false;
+	  	String username = null;
+		request.getSession().setAttribute("userFlag", userFlag);
+		request.getSession().setAttribute("username", username);
+	}
+%>
 <body>
 	<div class="header">
-		<a href="/Proquation">
-        	<img src="/Proquation/images/logo.jpg" alt="logo" class = "logo"/>
-        	<h1 class="title">Proquation</h1>
-        </a>
+		<div class="header-logo">
+			<a href="/Proquation">
+        		<img src="/Proquation/images/logo.jpg" alt="logo" class = "logo"/>
+        		<h1 class="title">Proquation</h1>
+        	</a>
+        </div>
+        <%
+        	if(((Boolean)session.getAttribute("userFlag")).booleanValue()) {
+        %>
+        <div class="header-logout">
+        	<div class="header-name"></div>
+        	<a href="">Logout</a>
+        </div>
+        <%
+        	}
+        %>
     </div>
 </body>
 </html>
