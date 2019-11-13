@@ -15,7 +15,7 @@
 	href="/Proquation/css/studentLanding.css">
 </head>
 <body>
-<%Student student = (Student) request.getAttribute("student");
+<%Student student = (Student) request.getSession().getAttribute("student");
 	String grade = student.getStudentGrade(); 
 	request.setAttribute("student", student);	
 %>
