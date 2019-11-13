@@ -20,10 +20,10 @@
 	boolean userFlag = true;
 	request.getSession().removeAttribute("username");
 	request.getSession().removeAttribute("userFlag");
-	request.getSession().setAttribute("username", username);
-	request.getSession().setAttribute("userFlag", userFlag);
+	//request.getSession().setAttribute("username", username);
+	//request.getSession().setAttribute("userFlag", userFlag);
+	setSession(request, username, userFlag);
 	request.getSession().setAttribute("student", student);
-	setSession(request);
 %>
 	<div class="student-landing-container">
 		<section class="student-practice-section">

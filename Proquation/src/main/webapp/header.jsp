@@ -8,17 +8,21 @@
 <link rel="stylesheet" type="text/css"
 	href="/Proquation/css/header.css"/>
 </head>
-<%!
-	public void setSession(HttpServletRequest request) {
-		if((String)request.getSession().getAttribute("username") == null) {
-			boolean userFlag = false;
-	  		String username = null;
-			request.getSession().setAttribute("userFlag", userFlag);
-			request.getSession().setAttribute("username", username);
-		}
+<%
+	if((String)request.getSession().getAttribute("username") == null) {
+		boolean userFlag = false;
+		String username = null;
+		request.getSession().setAttribute("userFlag", userFlag);
+		request.getSession().setAttribute("username", username);
 	}
 %>
-<%setSession(request); %>
+<%!
+	public void setSession(HttpServletRequest request, String username, boolean userFlag) {
+		request.getSession().setAttribute("userFlag", userFlag);
+		request.getSession().setAttribute("username", username);
+	}
+
+%>
 <body>
 	<div class="header">
 		<div class="header-logo">
