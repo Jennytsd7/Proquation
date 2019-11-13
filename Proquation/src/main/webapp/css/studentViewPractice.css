@@ -9,27 +9,31 @@ body {
 }
 
 .student-practice-body {
-	height: 100vh;
+	height: 88vh;
 }
 
 .button-panel {
-    height: 100%;
+    height: 95%;
     width: 40%;
     display: block;
     float: left;
+    box-sizing: border-box;
 }
 
 .sandbox-result {
     display: block;
     width: 60%;
-    height: 100%;
+    height: 90%;
     float: right;
+    box-sizing: border-box;
+    position: relative;
 }
 
 .sandbox-result .sandbox {
-    height: 60%;
+    height: 70%;
     width: 100%;
     border-bottom: 3px solid gray;
+    box-sizing: border-box;
 }
 
 .sandbox-result .sandbox .sandbox-heading {
@@ -41,9 +45,31 @@ body {
 
 .sandbox-result .result {
     width: 100%;
-    height: 40%;
     position: relative;
-    top: 50px;
+    top: 0;
+}
+
+.result_content{
+	position: relative;
+	border: 3px solid #595959;
+	border-radius: 4px;
+	padding: 14px;
+	height: 50px;
+	width: 300px;
+	box-sizing: border-box;
+	text-align: center;
+	left: 50%;
+	transform: translate(-50%, 0);
+	top: 20px;
+}
+
+.result_heading{
+	text-transform: uppercase;
+	font-size: 20px;
+	font-family: asap, sans-serif;
+	text-align: center;
+	position: relative;
+	margin-top: 20px;
 }
 
 .sandbox-result .sandbox .dragButtons {
@@ -92,28 +118,62 @@ body {
 	text-align: center;
 }
 
-.result_content{
-	position: relative;
-	border: 3px solid #595959;
-	border-radius: 4px;
-	padding: 14px;
-	height: 50px;
-	width: 300px;
-	box-sizing: border-box;
-	text-align: center;
-	left: 50%;
-	transform: translate(-50%, -50%);
-	top: 20%;
-}
-
-    
-.result_heading{
-	text-transform: uppercase;
-	font-size: 20px;
-	font-family: asap, sans-serif;
-	text-align: center;
-}
-
 .clearButton {
-	margin-left: 50px;
+	margin-left: 50px !important;
 }
+
+.btn-lg {
+    padding: 10px 16px !important;
+    font-size: 18px !important;
+    line-height: 1.3333333 !important;
+    border-radius: 6px !important;
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: #337ab7;
+    border-color: #2e6da4;
+}
+
+.btn-danger {
+    color: #fff;
+    background-color: #d9534f;
+    border-color: #d43f3a;
+}
+
+.btn-danger:hover {
+    color: #fff;
+    background-color: #c9302c;
+    border-color: #ac2925;
+    text-decoration: none;
+}
+
+.btn-success {
+    color: #fff;
+    background-color: #5cb85c;
+    border-color: #4cae4c;
+}
+
+.btn {
+    display: inline-block;
+    margin-bottom: 0;
+    font-weight: 400;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    cursor: pointer;
+    background-image: none;
+    border: 1px solid transparent;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    border-radius: 4px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    margin: 0 10px;
+}
+
