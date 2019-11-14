@@ -1,5 +1,8 @@
 package com.proquation.bean;
-//Author Rahul
+/** @author Rahul Suresh
+ *  version 1.0
+ *  This is a Java bean class for student
+ */
 public abstract class Student {
 
 
@@ -32,15 +35,7 @@ public abstract class Student {
 	public void setStudent_grade(String student_grade) {
 		this.student_grade = student_grade;
 	}
-	
-	public abstract String getStudentFullname();
-	public abstract void setStudentFullname(String studentFullname);
-	public abstract String getStudentUsername();
-	public abstract void setStudentUsername(String studentUsername);
-	public abstract String getStudentPassword();
-	public abstract void setStudentPassword(String studentPassword);
-	public abstract String getStudentGrade();
-	public abstract void setStudentGrade(String studentGrade);
+
 
 }
 
