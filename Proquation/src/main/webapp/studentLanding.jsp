@@ -21,6 +21,12 @@
 				<img src="/Proquation/images/quiz-img.png" alt="student"/>
 			</a>
 		</section>
-		</div>
+		<section class="teacher-quiz-section">
+			<h1>Take a Quiz</h1>
+			<a href="CreateQuiz.jsp">
+				<img src="/Proquation/images/quiz-img.png" alt="student"/>
+			</a>
+		</section>
+	</div>
 </body>
 </html> 
