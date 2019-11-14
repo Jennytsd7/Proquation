@@ -26,14 +26,14 @@ public class TeacherLoginController extends HttpServlet {
 		TeacherLoginDAO login= new TeacherLoginDAO();
 		boolean isUserValid = login.ValidateTeacher(username, password);
 		if(isUserValid) {			
-			RequestDispatcher rd = request.getRequestDispatcher("studentLogin.jsp");
+			RequestDispatcher rd = request.getRequestDispatcher("teacherLanding.jsp");
 			rd.forward(request, response);
 		}
 		else
 		{
 			message = "Login Failed!! Please check your crendentials";
 			request.setAttribute("message", message);
-			response.sendRedirect("teacher-login.jsp");
+			response.sendRedirect("teacherLogin.jsp");
 			
 		}
 	}
