@@ -7,23 +7,23 @@ package com.proquation.bean;
 
 public class StudentHighGrade extends Student {
     
-    public String getStudentFullname() {
-        return this.getStudent_name();
+    public String getHighGradeStudentFullname() {
+        return this.getStudentName();
     }
-    public void setStudentFullname(String studentFullname) {
-    	this.setStudent_name(studentFullname);
+    public void setHighGradeStudentFullname(String studentFullname) {
+    	this.setStudentName(studentFullname);
     }
-    public String getStudentUsername() {
-        return this.getStudent_username();
+    public String getHighGradeStudentUsername() {
+        return this.getStudentUsername();
     }
-    public void setStudentUsername(String studentUsername) {
-        this.setStudent_username(studentUsername);
+    public void setHighGradeStudentUsername(String studentUsername) {
+        this.setStudentUsername(studentUsername);
     }
    
-    public String getStudentGrade() {
-        return this.getStudent_grade();
+    public String getHighGradeStudentGrade() {
+        return this.getStudentGrade();
     }
-    public void setStudentGrade(String studentGrade) {
-    	this.setStudent_grade(studentGrade);
+    public void setHighGradeStudentGrade(String studentGrade) {
+    	this.setStudentGrade(studentGrade);
     }
 }

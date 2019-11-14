@@ -11,28 +11,28 @@ public abstract class Student {
 	private String student_username;
 	private String student_grade;
 
-	public int getStudent_id() {
+	public int getStudentId() {
 		return student_id;
 	}
-	public void setStudent_id(int student_id) {
+	public void setStudentId(int student_id) {
 		this.student_id = student_id;
 	}
-	public String getStudent_name() {
+	public String getStudentName() {
 		return student_name;
 	}
-	public void setStudent_name(String student_name) {
+	public void setStudentName(String student_name) {
 		this.student_name = student_name;
 	}
-	public String getStudent_username() {
+	public String getStudentUsername() {
 		return student_username;
 	}
-	public void setStudent_username(String student_username) {
+	public void setStudentUsername(String student_username) {
 		this.student_username = student_username;
 	}
-	public String getStudent_grade() {
+	public String getStudentGrade() {
 		return student_grade;
 	}
-	public void setStudent_grade(String student_grade) {
+	public void setStudentGrade(String student_grade) {
 		this.student_grade = student_grade;
 	}
 
