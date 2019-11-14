@@ -50,6 +50,7 @@ public class StudentRegistrationController extends HttpServlet {
 		request.setAttribute("message", message);
 		RequestDispatcher rd = request.getRequestDispatcher("studentLogin.jsp");
 		System.out.println("Inside student controller end ");
+		rd.forward(request, response);
 		
 	}
 	
