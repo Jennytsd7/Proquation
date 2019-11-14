@@ -15,21 +15,25 @@
 	href="/Proquation/css/studentLanding.css">
 </head>
 <body>
+
 <%Student student = (Student) request.getSession().getAttribute("student");
 	String grade = student.getStudentGrade(); 
 	request.setAttribute("student", student);	
 %>
-	<div class="student-landing-container">
-		<section class="student-practice-section">
-			<h1>Practice Mode</h1>
-			<a href="studentViewPractice.jsp">
-				<img src="/Proquation/images/practice-img.jpg" alt="student"/>
-			</a>
-		</section>
+	<div class="student-landing-container">	
 		<section class="student-quiz-section">
-			<h1>Take a Quiz</h1>
+			<h1>Quiz Mode</h1>
+			<h2>Student should attempt a quiz to test his/her knowledge</h2>
 			<a href="takeQuiz.jsp">
 				<img src="/Proquation/images/quiz-img.png" alt="student"/>
+			</a>
+		</section>
+		
+		<section class="student-practice-section">
+			<h1>Student Practice Mode</h1>
+			<h2> Student can solve questions to practice concepts</h2>
+			<a href="studentViewPractice.jsp">
+				<img src="/Proquation/images/practice-img.jpg" alt="student"/>
 			</a>
 		</section>
 	</div>
