@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
+
+<%@include file="/header.jsp" %>	
 	
 <!DOCTYPE html>
 <html>
@@ -20,46 +22,53 @@
 </head>
 <body>
 	<div class ="loadQuestions"></div>
-	<form action ="ProfessorController" method="post">
+	<form action ="" onSubmit=submitform() method="post">
 		<div class ="form-group">
-			<label for ="q1">Question:</label> <input type="text"
-				class ="form-control" name="question" id="q1"
+			<label for ="questionNumber">Question Number:</label> <input type="text"
+				class ="form-control" name="questionNumber" id="questionNumber"
+				placeholder="Enter question number">
+		</div>
+		<div class ="form-group">
+			<label for ="question">Question:</label> <input type="text"
+				class ="form-control" name="question" id="question"
 				placeholder="Enter your question">
 		</div>
 		<div class="form-group">
-			<label for="a1">Answer 1:</label> <input type="text"
-				class="form-control" name="option1" id="a1"
+			<label for="option1">Answer 1:</label> <input type="text"
+				class="form-control" name="option1" id="option1"
 				placeholder="Enter option 1">
 		</div>
 		<div class="form-group">
-			<label for="a2">Answer 2:</label> <input type="text"
-				class="form-control" name="option2" id="a2"
+			<label for="option2">Answer 2:</label> <input type="text"
+				class="form-control" name="option2" id="option2"
 				placeholder="Enter option 2">
 		</div>
 		<div class="form-group">
-			<label for="a3">Answer 3:</label> <input type="text"
-				class="form-control" name="option3" id="a3"
+			<label for="option3">Answer 3:</label> <input type="text"
+				class="form-control" name="option3" id="option3"
 				placeholder="Enter  option 3">
 		</div>
 		<div class="form-group">
-			<label for="a4">Answer 4:</label> <input type="text"
-				class="form-control" name="option4" id="a4"
+			<label for="option4">Answer 4:</label> <input type="text"
+				class="form-control" name="option4" id="option4"
 				placeholder="Enter option 4">
 		</div>
 		<div class="form-group">
-			<label for="a5">Correct Answer:</label> <input type="text"
-				class="form-control" name="correctanswer" id="a5"
+			<label for="correctanswer">Correct Answer:</label> <input type="text"
+				class="form-control" name="correctanswer" id="correctanswer"
 				placeholder="Enter correct answer">
 		</div>
 			<input type="hidden" name="action" value="Continue"> <input
 				class="btn btn-primary" type="submit" name="Continue"
-				value="Continue" button value="Refresh Page" onClick="window.location.reload();">
+				value="Continue">
 			
 			<input type="hidden" name="action" value="Submit"> <input
 				class="btn btn-primary" type="submit" name="Submit"
 				value="Submit">
 		</div>
 	</form>
+	
+	<script type="text/javascript" src="/Proquation/js/quizQuestions.js" charset="utf-8"></script>
 
 </body>
 </html>
