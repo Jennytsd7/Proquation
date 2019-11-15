@@ -1,5 +1,6 @@
 /**
- * 
+ * Author Raghavan
+ * Version 1.0
  */
 function addUsername(name) {
 	var usernameDiv = document.querySelector('.header-name');
