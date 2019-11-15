@@ -17,6 +17,12 @@ Version 1.0
    <div align="center">
       <div class="container"  align="center">
           <form action="studentregister" onsubmit="return submitform()" method="post">
+          <%
+          	String errorMessage = (String)request.getAttribute("errorMessage");
+          	if(errorMessage != null) {
+          		out.println(errorMessage);
+          	}
+          %>
           	<h3> Sign Up </h3>
           	<div>
             	<label for="name">NAME</label>

@@ -40,8 +40,9 @@ public class StudentRegistrationController extends HttpServlet {
 		}
 		else{
 			System.out.println("Inside  username2 student controller");
-			response.sendRedirect("studentLogin.jsp");
-			
+			String message = "Enter a different username";
+			request.setAttribute("errorMessage", message);
+			request.getRequestDispatcher("studentRegistration.jsp").forward(request, response);
 		}
 			
 		
