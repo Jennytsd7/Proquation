@@ -12,13 +12,14 @@ Version 1.0 -->
 <link rel="stylesheet" type="text/css"
     href="/Proquation/css/studentLogin.css">
 </head>
+
 <body class="bgimg">
     <div class="container">
         <form action="studentlogin" onsubmit="submitform()" method="post">
         <%
            String errorMessage = (String)request.getAttribute("errorMessage");
            if (errorMessage != null) {
-           out.println(errorMessage);
+           		out.println(errorMessage);
        	}
        %>
             <h3>LOGIN</h3>

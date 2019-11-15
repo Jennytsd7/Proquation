@@ -1,38 +1,31 @@
 package com.proquation.bean;
 
-/** @author Raghavan Sreenivasa
+/** @author Rahul Suresh
  *  version 1.0
  *  This is a Java bean class for student belonging to grade 1 - 3
  */
 
-public class StudentLowGrade implements Student {
-    private String studentFullname;
-    private String studentUsername;
-    private String studentPassword;
-    private String studentGrade;
-    
-    public String getStudentFullname() {
-        return studentFullname;
-    }
-    public void setStudentFullname(String studentFullname) {
-        this.studentFullname = studentFullname;
-    }
-    public String getStudentUsername() {
-        return studentUsername;
-    }
-    public void setStudentUsername(String studentUsername) {
-        this.studentUsername = studentUsername;
-    }
-    public String getStudentPassword() {
-        return studentPassword;
-    }
-    public void setStudentPassword(String studentPassword) {
-        this.studentPassword = studentPassword;
-    }
-    public String getStudentGrade() {
-        return studentGrade;
-    }
-    public void setStudentGrade(String studentGrade) {
-        this.studentGrade = studentGrade;
-    }
+public class StudentLowGrade extends Student {
+
+	public String getLowGradeStudentFullname() {
+		return this.getStudentName();
+	}
+	public void setLowGradeStudentFullname(String studentFullname) {
+		this.setStudentName(studentFullname);
+	}
+	public String getLowGradeStudentUsername() {
+		return this.getStudentUsername();
+	}
+	public void setLowGradeStudentUsername(String studentUsername) {
+		this.setStudentUsername(studentUsername);    
+	}
+
+	public String getLowGradeStudentGrade() {
+		return this.getStudentGrade();
+	}
+	public void setLowGradeStudentGrade(String studentGrade) {
+		this.setStudentGrade(studentGrade);	
+	}
+		
+	
 }

@@ -8,7 +8,6 @@ Co-author name: Janani Anand, Swarnalatha Sreenigarajan -->
 <html>
 <head>
 	<link rel="stylesheet" type="text/css" href="/Proquation/css/studentViewPractice.css">
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
 </head>
 <%Student student = (Student) request.getSession().getAttribute("student");
 	String grade = student.getStudentGrade(); %>
