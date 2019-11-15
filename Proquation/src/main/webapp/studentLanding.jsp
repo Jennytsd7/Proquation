@@ -21,7 +21,6 @@
 	request.getSession().removeAttribute("username");
 	request.getSession().removeAttribute("userFlag");
 	setUsername(request, username, userFlag);
-	request.getSession().setAttribute("student", student);
 %>
 	<div class="student-landing-container">
 		<section class="student-practice-section">
