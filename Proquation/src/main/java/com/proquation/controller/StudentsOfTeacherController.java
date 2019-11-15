@@ -26,16 +26,13 @@ public class StudentsOfTeacherController extends HttpServlet {
         super();
     }
 
-	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {		
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		List<Student> studentlist = new ArrayList<Student>();
 		Teacher teacher = (Teacher) request.getSession().getAttribute("teacher");
 		StudentsOfTeacherDAO studentobj = new StudentsOfTeacherDAO();
 		studentlist = studentobj.GetStudentsOfTeacher(teacher.getTeacherGrade());
-		for (Student s:studentlist){
-			System.out.println(s.getStudentName());
-		}
-		
-		
+		request.setAttribute("studentlist", studentlist);
+		request.getRequestDispatcher("studentList.jsp").forward(request, response);
 	}
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		doGet(request, response);

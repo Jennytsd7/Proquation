@@ -15,14 +15,17 @@
 	if((String)request.getSession().getAttribute("username") == null) {
 		boolean userFlag = false;
 		String username = null;
+		String userType = null;
 		request.getSession().setAttribute("userFlag", userFlag);
 		request.getSession().setAttribute("username", username);
+		request.getSession().setAttribute("userType", userType);
 	}
 %>
 <%!
-	public void setUsername(HttpServletRequest request, String username, boolean userFlag) {
+	public void setUsername(HttpServletRequest request, String username, boolean userFlag, String userType) {
 		request.getSession().setAttribute("userFlag", userFlag);
 		request.getSession().setAttribute("username", username);
+		request.getSession().setAttribute("userType", userType);
 	}
 %>
 <body>

@@ -14,6 +14,14 @@ Version 1.0
 	href="/Proquation/css/teacherLanding.css">
 </head>
 <body>
+<%Teacher teacher = (Teacher)request.getSession().getAttribute("teacher"); 
+	String username = teacher.getTeacherUsername();
+	boolean userFlag = true;
+	request.getSession().removeAttribute("username");
+	request.getSession().removeAttribute("userFlag");
+	request.getSession().removeAttribute("userType");
+	setUsername(request, username, userFlag, "Teacher");
+%>
 	<div class="teacher-landing-container">
 		<section class="teacher-quiz-section">
 			<h1>Post Quiz</h1>
@@ -23,18 +31,10 @@ Version 1.0
 		</section>
 		<section class="teacher-view-student-section">
 			<h1>View Students in Class</h1>
-			<a href="viewStudents.jsp">
+			<a href="/Proquation/studentofteacher">
 				<img src="/Proquation/images/student-list.jpg" alt="student"/>
 			</a>
 		</section>
-		
-		<section class="teacher-quiz-section">
-			<h1>Create a Quiz</h1>
-			<a href="CreateQuiz.jsp">
-				<img src="/Proquation/images/quiz-img.png" alt="student"/>
-			</a>
-		</section>
-		
 	</div>
 </body>
 </html>
