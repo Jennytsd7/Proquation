@@ -15,7 +15,7 @@ Version 1.0 -->
 </head>
 <body class="bgimg">
 	<div class="container">
-		<form action="" onsubmit="submitform()" method="post">
+		<form action="teacherlogin" onsubmit="submitform()" method="post">
 		<%
            String errorMessage = (String)request.getAttribute("errorMessage");
            if (errorMessage != null) {
