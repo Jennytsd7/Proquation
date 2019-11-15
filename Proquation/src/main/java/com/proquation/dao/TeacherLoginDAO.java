@@ -4,14 +4,16 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.util.ArrayList;
-import java.util.List;
+
+import com.proquation.bean.StudentHighGrade;
+import com.proquation.bean.StudentLowGrade;
+import com.proquation.bean.Teacher;
+import com.proquation.bean.TeacherHighGrade;
+import com.proquation.bean.TeacherLowGrade;
 //Author name: Rahul Suresh
 public class TeacherLoginDAO {
-	public boolean ValidateTeacher(String username, String password) {
-		boolean flag = false;
-		List<String> slist = new ArrayList<String>();
-		StudentsOfTeacherDAO obj = new StudentsOfTeacherDAO();
+	public Teacher ValidateTeacher(String username, String password) {
+		Teacher teacher= null;
 		String query = "select * from Teacher where teacher_username=?";
 		Connection connection = null;
 		PreparedStatement statement = null;
@@ -23,15 +25,18 @@ public class TeacherLoginDAO {
 			if(rs.next())
 			{
 				String dbPassword= rs.getString("teacher_password");
-				String grade = rs.getString("teacher_grade");
-				slist =obj.GetStudentsOfTeacher(grade);
 				if(dbPassword.equals(password))
 				{
-					flag=true;
+					if(rs.getString("teacher_grade") == "1")
+						teacher = new TeacherLowGrade();
+					else
+						teacher = new TeacherHighGrade();											
+					teacher.setTeacherName(rs.getString("teacher_fullname"));
+					teacher.setTeacherGrade(rs.getString("teacher_grade"));
+					teacher.setTeacherUsername(rs.getString("teacher_username"));
 				}
 			}
-			else
-				flag = false;
+
 		}
 		catch(Exception e) {
 			e.printStackTrace();
@@ -46,7 +51,7 @@ public class TeacherLoginDAO {
 				e.printStackTrace();
 			}
 		}
-		return flag;
+		return teacher;
 	}
 
 }

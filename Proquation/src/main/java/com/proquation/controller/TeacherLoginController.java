@@ -1,6 +1,8 @@
 package com.proquation.controller;
 
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -8,6 +10,10 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+
+import com.proquation.bean.Student;
+import com.proquation.bean.Teacher;
+import com.proquation.dao.StudentsOfTeacherDAO;
 import com.proquation.dao.TeacherLoginDAO;
 
 // Author name: Rahul Suresh
@@ -24,8 +30,8 @@ public class TeacherLoginController extends HttpServlet {
 		String password = request.getParameter("password");
 		String message;
 		TeacherLoginDAO login= new TeacherLoginDAO();
-		boolean isUserValid = login.ValidateTeacher(username, password);
-		if(isUserValid) {			
+		Teacher teacher = login.ValidateTeacher(username, password);
+		if(teacher != null) {		
 			RequestDispatcher rd = request.getRequestDispatcher("teacherLanding.jsp");
 			rd.forward(request, response);
 		}
@@ -33,7 +39,7 @@ public class TeacherLoginController extends HttpServlet {
 		{
 			message = "Login Failed!! Please check your crendentials";
 			request.setAttribute("message", message);
-			response.sendRedirect("teacherLogin.jsp");
+	           request.getRequestDispatcher("teacherLogin.jsp").forward(request, response);
 			
 		}
 	}
