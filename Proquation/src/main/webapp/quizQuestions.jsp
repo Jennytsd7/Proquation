@@ -15,69 +15,50 @@
 <script
 	src="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" type="text/css" href="Style.css">
 <link rel="stylesheet" type="text/css" href="/Proquation/css/quizQuestions.css"/>
 
 </head>
 <body>
-	<%
-        String uName = (String) session.getAttribute("uName");
-        String isSessionValid = (String) session.getAttribute("validSession");
-        if (isSessionValid == null || isSessionValid.isEmpty() || !isSessionValid.equalsIgnoreCase("True")
-                || uName == null || uName.isEmpty()) {
-            response.sendRedirect("studentLogin.jsp");
-        }
-    %>
-	<ul>
-		<li><a href="ProfessorDash.jsp">DASHBOARD</a></li>
-		<li style="float:right">
-			<div style="float: center">
-				<form action="LoginController" method="post">
-					<input type="hidden" name="action" value="logoff"> <input
-						class="logoutonly" type="submit" value="LogOut" class="logout">
-				</form>
-			</div>
-		</li>
-	</ul>
-	<form action="ProfessorController" method="post">
-		<div class="form-group">
-			<label for="q1">Question:</label> <input type="text"
-				class="form-control" name="question" id="q1"
+	<div class ="loadQuestions"></div>
+	<form action ="ProfessorController" method="post">
+		<div class ="form-group">
+			<label for ="q1">Question:</label> <input type="text"
+				class ="form-control" name="question" id="q1"
 				placeholder="Enter your question">
 		</div>
 		<div class="form-group">
-			<label for="a1">Answer1:</label> <input type="text"
+			<label for="a1">Answer 1:</label> <input type="text"
 				class="form-control" name="option1" id="a1"
-				placeholder="Enter option1">
+				placeholder="Enter option 1">
 		</div>
 		<div class="form-group">
-			<label for="a2">Answer2:</label> <input type="text"
+			<label for="a2">Answer 2:</label> <input type="text"
 				class="form-control" name="option2" id="a2"
-				placeholder="Enter option2">
+				placeholder="Enter option 2">
 		</div>
 		<div class="form-group">
-			<label for="a3">Answer3:</label> <input type="text"
+			<label for="a3">Answer 3:</label> <input type="text"
 				class="form-control" name="option3" id="a3"
-				placeholder="Enter  option3">
+				placeholder="Enter  option 3">
 		</div>
 		<div class="form-group">
-			<label for="a4">Answer4:</label> <input type="text"
+			<label for="a4">Answer 4:</label> <input type="text"
 				class="form-control" name="option4" id="a4"
-				placeholder="Enter option4">
+				placeholder="Enter option 4">
 		</div>
 		<div class="form-group">
 			<label for="a5">Correct Answer:</label> <input type="text"
 				class="form-control" name="correctanswer" id="a5"
 				placeholder="Enter correct answer">
 		</div>
-		<div class="form-group">
-			<label for="a6">Marks:</label> <input type="text"
-				class="form-control" name="marks" id="a6" placeholder="Enter Marks">
-		</div>
 			<input type="hidden" name="action" value="Continue"> <input
 				class="btn btn-primary" type="submit" name="Continue"
-				value="Continue">
-		<br/>
+				value="Continue" button value="Refresh Page" onClick="window.location.reload();">
+			
+			<input type="hidden" name="action" value="Submit"> <input
+				class="btn btn-primary" type="submit" name="Submit"
+				value="Submit">
+		</div>
 	</form>
 
 </body>
