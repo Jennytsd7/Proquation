@@ -26,6 +26,14 @@ Version 1.0
 				<img src="/Proquation/images/student-list.jpg" alt="student"/>
 			</a>
 		</section>
+		
+		<section class="teacher-quiz-section">
+			<h1>Create a Quiz</h1>
+			<a href="CreateQuiz.jsp">
+				<img src="/Proquation/images/quiz-img.png" alt="student"/>
+			</a>
+		</section>
+		
 	</div>
 </body>
 </html>

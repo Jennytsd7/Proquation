@@ -36,6 +36,7 @@
 				<img src="/Proquation/images/quiz-img.png" alt="student"/>
 			</a>
 		</section>
+		
 	</div>
 </body>
 </html> 
