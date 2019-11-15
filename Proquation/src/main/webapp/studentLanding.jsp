@@ -9,20 +9,18 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Teacher Landing Page</title>
+<title>Student Landing Page</title>
 <link rel="stylesheet" type="text/css"
 	href="/Proquation/css/studentLanding.css">
 </head>
 <body>
-<%Student student = (Student) request.getAttribute("student");
+<%Student student = (Student) request.getSession().getAttribute("student");
 	String grade = student.getStudentGrade(); 
 	String username = student.getStudentUsername();
 	boolean userFlag = true;
 	request.getSession().removeAttribute("username");
 	request.getSession().removeAttribute("userFlag");
-	//request.getSession().setAttribute("username", username);
-	//request.getSession().setAttribute("userFlag", userFlag);
-	setSession(request, username, userFlag);
+	setUsername(request, username, userFlag);
 	request.getSession().setAttribute("student", student);
 %>
 	<div class="student-landing-container">

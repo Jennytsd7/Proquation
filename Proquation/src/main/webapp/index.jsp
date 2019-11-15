@@ -11,7 +11,18 @@ Co-author name: Raghavan Sreenivasa -->
 	<div class="homepage-container">
 		<section class="student-section">
 			<h1>Student</h1>
+			<%
+				if(((Boolean)session.getAttribute("userFlag")).booleanValue()) {
+					%>
+					<a href="studentLanding.jsp">
+			<%
+				}
+				else {
+					%>
 			<a href="studentLogin.jsp">
+			<%
+				}
+			%>
 				<img src="/Proquation/images/student-icon.png" alt="student"/>
 			</a>
 		</section>
