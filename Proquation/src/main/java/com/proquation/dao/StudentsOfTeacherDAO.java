@@ -7,12 +7,16 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.proquation.bean.Student;
+import com.proquation.bean.StudentHighGrade;
+import com.proquation.bean.StudentLowGrade;
+
 public class StudentsOfTeacherDAO {
 
-	public List<String> GetStudentsOfTeacher(String teacher_grade) {
-		List<String> students = new ArrayList<String>();
-		String names;
-		String query = "SELECT student_fullname from Student where Student.student_grade=?";
+	public List<Student> GetStudentsOfTeacher(String teacher_grade) {
+		List<Student> students = new ArrayList<Student>();
+		Student student = null;
+		String query = "SELECT * from Student where Student.student_grade=?";
 		Connection connection = null;
 		PreparedStatement statement = null;
 		try {
@@ -20,13 +24,21 @@ public class StudentsOfTeacherDAO {
 			statement = connection.prepareStatement(query);
 			statement.setString(1, teacher_grade);
 			ResultSet rs = statement.executeQuery();
-			if (rs.next())
-			{
-				while (rs.next()) {
-					names = rs.getString("student_fullname");
-					students.add(names);
+			while (rs.next()) {
+				String grade = rs.getString("student_grade");
+				if(grade.equals("1")){
+					student = new StudentLowGrade();	
 				}
+				else{
+					student = new StudentHighGrade();						
+				}
+				student.setStudentGrade(rs.getString("student_grade"));
+				student.setStudentId(rs.getInt("student_id"));
+				student.setStudentName(rs.getString("student_fullname"));
+				student.setStudentUsername(rs.getString("student_username"));
+				students.add(student);
 			}
+
 		}
 		catch (Exception e) {
 			e.printStackTrace();
