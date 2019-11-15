@@ -8,6 +8,27 @@
 <link rel="stylesheet" type="text/css"
 	href="/Proquation/css/header.css"/>
 </head>
+<<<<<<< Updated upstream
+=======
+<script type="text/javascript" src="/Proquation/js/header.js" charset="utf-8"></script>
+<%
+	if((String)request.getSession().getAttribute("username") == null) {
+		boolean userFlag = false;
+		String username = null;
+		String userType = null;
+		request.getSession().setAttribute("userFlag", userFlag);
+		request.getSession().setAttribute("username", username);
+		request.getSession().setAttribute("userType", userType);
+	}
+%>
+<%!
+	public void setUsername(HttpServletRequest request, String username, boolean userFlag, String userType) {
+		request.getSession().setAttribute("userFlag", userFlag);
+		request.getSession().setAttribute("username", username);
+		request.getSession().setAttribute("userType", userType);
+	}
+%>
+>>>>>>> Stashed changes
 <body>
 	<div class="header">
 		<a href="/Proquation">

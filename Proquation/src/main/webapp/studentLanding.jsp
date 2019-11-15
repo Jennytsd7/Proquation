@@ -17,7 +17,16 @@
 <body>
 <%Student student = (Student) request.getAttribute("student");
 	String grade = student.getStudentGrade(); 
+<<<<<<< Updated upstream
 	request.setAttribute("student", student);	
+=======
+	String username = student.getStudentUsername();
+	boolean userFlag = true;
+	request.getSession().removeAttribute("username");
+	request.getSession().removeAttribute("userFlag");
+	request.getSession().removeAttribute("userType");
+	setUsername(request, username, userFlag, "Student");
+>>>>>>> Stashed changes
 %>
 	<div class="student-landing-container">
 		<section class="student-practice-section">

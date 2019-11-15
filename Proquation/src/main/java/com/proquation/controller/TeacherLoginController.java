@@ -14,32 +14,46 @@ import com.proquation.dao.TeacherLoginDAO;
 @WebServlet("/teacherlogin")
 public class TeacherLoginController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-    
-    public TeacherLoginController() {
-        super();
-    }
 
-	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	public TeacherLoginController() {
+		super();
+	}
+
+	protected void doGet(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
 		String username = request.getParameter("firstname");
 		String password = request.getParameter("password");
 		String message;
+<<<<<<< Updated upstream
 		TeacherLoginDAO login= new TeacherLoginDAO();
 		boolean isUserValid = login.ValidateTeacher(username, password);
 		if(isUserValid) {			
+=======
+		TeacherLoginDAO login = new TeacherLoginDAO();
+		Teacher teacher = login.ValidateTeacher(username, password);
+		if (teacher != null) {
+			request.getSession().setAttribute("teacher", teacher);
+			request.getSession().setAttribute("username", teacher.getTeacherUsername());
+			request.getSession().setAttribute("userFlag", true);
+>>>>>>> Stashed changes
 			RequestDispatcher rd = request.getRequestDispatcher("teacherLanding.jsp");
 			rd.forward(request, response);
-		}
-		else
-		{
+		} else {
 			message = "Login Failed!! Please check your crendentials";
 			request.setAttribute("message", message);
+<<<<<<< Updated upstream
 			response.sendRedirect("teacherLogin.jsp");
 			
+=======
+			request.getRequestDispatcher("teacherLogin.jsp").forward(request, response);
+
+>>>>>>> Stashed changes
 		}
 	}
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+
+	protected void doPost(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
 		doGet(request, response);
 	}
 
 }
-
