@@ -29,7 +29,7 @@ public class StudentLoginDAO {
 						student = new StudentLowGrade();
 					else
 						student = new StudentHighGrade();											
-					student.setStudentFullname(rs.getString("student_fullname"));
+					student.setStudentName(rs.getString("student_fullname"));
 					student.setStudentUsername(rs.getString("student_Username"));
 					student.setStudentGrade(rs.getString("student_grade"));
 				}
