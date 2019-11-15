@@ -28,7 +28,7 @@ public class StudentLoginController extends HttpServlet {
         StudentLoginDAO login= new StudentLoginDAO();
         Student student = login.ValidateStudent(username, password);
        if(student != null) {
-           request.setAttribute("student", student);
+           request.getSession().setAttribute("student", student);
            request.getSession().setAttribute("username", username);
            request.getSession().setAttribute("userFlag", true);
            RequestDispatcher rd = request.getRequestDispatcher("studentLanding.jsp");
