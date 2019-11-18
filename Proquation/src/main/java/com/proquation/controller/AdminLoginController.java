@@ -8,8 +8,10 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+
+import com.proquation.bean.Admin;
 import com.proquation.dao.AdminLoginDAO;
-//Author name: Rahul Suresh
+//Author name: Rahul Suresh, Raghavan
 @WebServlet("/adminlogin")
 public class AdminLoginController extends HttpServlet{
 	private static final long serialVersionUID = 1L;
@@ -23,18 +25,30 @@ public class AdminLoginController extends HttpServlet{
 		String password = request.getParameter("password");
 		String message;
 		AdminLoginDAO login= new AdminLoginDAO();
-		boolean isUserValid = login.ValidateAdmin(username, password);
-		if(isUserValid) {			
-			//for testing
-			RequestDispatcher rd = request.getRequestDispatcher("teacherRegistration.jsp");
+		Admin admin = login.ValidateAdmin(username, password);
+		if(admin != null) {			
+			String userType = (String) request.getSession().getAttribute("userType");
+			if (userType != null) {
+				if (userType.equals("Student")) {
+					request.getSession().removeAttribute("Student");
+				} else if (userType.equals("Teacher")) {
+					request.getSession().removeAttribute("Teacher");
+				} else if (userType.equals("Admin")) {
+					request.getSession().removeAttribute("Admin");
+				}
+			}
+			request.getSession().setAttribute("admin", admin);
+			request.getSession().setAttribute("username", username);
+			request.getSession().setAttribute("userFlag", true);
+			request.getSession().setAttribute("userType", "Admin");
+			RequestDispatcher rd = request.getRequestDispatcher("adminLanding.jsp");
 			rd.forward(request, response);
 		}
 		else
 		{
 			message = "Login Failed!! Please check your crendentials";
-			request.setAttribute("message", message);
-			response.sendRedirect("adminLogin.jsp");
-			
+			request.setAttribute("errorMessage", message);
+			request.getRequestDispatcher("adminLogin.jsp").forward(request, response);
 		}
 	}
 

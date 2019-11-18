@@ -21,6 +21,9 @@
 			else if(userType.equals("Teacher")) {
 				request.getSession().removeAttribute("Teacher");
 			}
+			else if(userType.equals("Admin")) {
+				request.getSession().removeAttribute("Admin");
+			}
 		}
 		try {
 			request.getRequestDispatcher("index.jsp").forward(request, response);	

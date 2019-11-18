@@ -4,13 +4,15 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-//Author : Rahul Suresh
+
+import com.proquation.bean.Admin;
+//Author : Rahul Suresh, Raghavan
 public class AdminLoginDAO {
-	public boolean ValidateAdmin(String username, String password) {
-		boolean flag = false;
+	public Admin ValidateAdmin(String username, String password) {
 		String query = "select admin_password from Admin where admin_username=?";
 		Connection connection = null;
 		PreparedStatement statement = null;
+		Admin admin = null;
 		try {
 			connection = (Connection) DatabaseConnection.getDBConnectionInstance().getConnection();
 			statement = connection.prepareStatement(query);
@@ -19,13 +21,12 @@ public class AdminLoginDAO {
 			if(rs.next())
 			{
 				String dbPassword = rs.getString("admin_password");
-				if(dbPassword.equals(password))
-				{
-					flag=true;
+				if(dbPassword.equals(password)) {
+					admin = new Admin();
+					admin.setAdminName(rs.getString("admin_fullname"));
+					admin.setAdminUsername(rs.getString("admin_username"));
 				}
 			}
-			else
-				flag = false;
 		}
 		catch(Exception e) {
 			e.printStackTrace();
@@ -40,7 +41,7 @@ public class AdminLoginDAO {
 				e.printStackTrace();
 			}
 		}
-		return flag;
+		return admin;
 	}
 
 }

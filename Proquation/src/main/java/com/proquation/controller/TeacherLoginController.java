@@ -34,6 +34,8 @@ public class TeacherLoginController extends HttpServlet {
 					request.getSession().removeAttribute("Student");
 				} else if (userType.equals("Teacher")) {
 					request.getSession().removeAttribute("Teacher");
+				} else if (userType.equals("Admin")) {
+					request.getSession().removeAttribute("Admin");
 				}
 			}
 			request.getSession().setAttribute("teacher", teacher);

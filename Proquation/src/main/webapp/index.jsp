@@ -12,7 +12,7 @@ Co-author name: Raghavan Sreenivasa -->
 		<section class="student-section">
 			<h1>Student</h1>
 			<%
-				if(((Boolean)session.getAttribute("userFlag")).booleanValue()) {
+				if(((Boolean)session.getAttribute("userFlag")).booleanValue() && request.getSession().getAttribute("userType").equals("Student")) {
 					%>
 					<a href="studentLanding.jsp">
 			<%
@@ -28,13 +28,35 @@ Co-author name: Raghavan Sreenivasa -->
 		</section>
 		<section class="teacher-section">
 			<h1>Teacher</h1>
+			<%
+				if(((Boolean)session.getAttribute("userFlag")).booleanValue() && request.getSession().getAttribute("userType").equals("Teacher")) {
+					%>
+					<a href="teacherLanding.jsp">
+			<%
+				}
+				else {
+					%>
 			<a href="teacherLogin.jsp">
+			<%
+				}
+			%>
 				<img src="/Proquation/images/teacher-icon.png" alt="teacher"/>
 			</a>
 		</section>
 		<section class="admin-section">
 			<h1>Admin</h1>
+			<%
+				if(((Boolean)session.getAttribute("userFlag")).booleanValue() && request.getSession().getAttribute("userType").equals("Admin")) {
+					%>
+					<a href="adminLanding.jsp">
+			<%
+				}
+				else {
+					%>
 			<a href="adminLogin.jsp">
+			<%
+				}
+			%>
 				<img src="/Proquation/images/admin-icon.png" alt="admin"/>
 			</a>
 		</section>

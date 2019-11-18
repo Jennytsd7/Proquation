@@ -16,6 +16,12 @@ Version 1.0
 <body class="bgimg">
 	<div class="container">
 		<form action="adminlogin" onsubmit="submitform()" method="post">
+		<%
+           String errorMessage = (String)request.getAttribute("errorMessage");
+           if (errorMessage != null) {
+           		out.println(errorMessage);
+       	}
+       %>
 			<h3>ADMIN LOGIN</h3><br>
 			<div class="form">
 				<label for="fname">USER NAME</label> <input type="text" id="fname"
