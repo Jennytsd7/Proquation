@@ -9,7 +9,7 @@ import com.proquation.bean.Admin;
 //Author : Rahul Suresh, Raghavan
 public class AdminLoginDAO {
 	public Admin ValidateAdmin(String username, String password) {
-		String query = "select admin_password from Admin where admin_username=?";
+		String query = "select * from Admin where admin_username=?";
 		Connection connection = null;
 		PreparedStatement statement = null;
 		Admin admin = null;

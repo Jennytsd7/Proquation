@@ -12,7 +12,7 @@
 </head>
 <body>
 <%	Admin admin = (Admin) request.getSession().getAttribute("admin"); 
-	String username = admin.getAdminUsername(); 
+	String username = admin.getAdminUsername();
 	boolean userFlag = true;
 	request.getSession().removeAttribute("username");
 	request.getSession().removeAttribute("userFlag");
