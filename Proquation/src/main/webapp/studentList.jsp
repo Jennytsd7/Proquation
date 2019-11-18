@@ -18,6 +18,11 @@
 	href="/Proquation/css/studentList.css"/>
 </head>
 <body>
+<div class="backbutton">
+		<a href="teacherLanding.jsp">
+		 <img src="/Proquation/images/backButton.png" alt="back"/>
+		</a>
+	</div>
 <table>
 	<tr>
 		<th>Name</th>
