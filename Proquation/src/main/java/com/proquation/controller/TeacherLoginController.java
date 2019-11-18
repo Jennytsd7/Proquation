@@ -1,9 +1,6 @@
 package com.proquation.controller;
 
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
-
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -11,9 +8,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.proquation.bean.Student;
 import com.proquation.bean.Teacher;
-import com.proquation.dao.StudentsOfTeacherDAO;
 import com.proquation.dao.TeacherLoginDAO;
 
 // Author name: Rahul Suresh
@@ -33,9 +28,18 @@ public class TeacherLoginController extends HttpServlet {
 		TeacherLoginDAO login = new TeacherLoginDAO();
 		Teacher teacher = login.ValidateTeacher(username, password);
 		if (teacher != null) {
+			String userType = (String) request.getSession().getAttribute("userType");
+			if (userType != null) {
+				if (userType.equals("Student")) {
+					request.getSession().removeAttribute("Student");
+				} else if (userType.equals("Teacher")) {
+					request.getSession().removeAttribute("Teacher");
+				}
+			}
 			request.getSession().setAttribute("teacher", teacher);
 			request.getSession().setAttribute("username", teacher.getTeacherUsername());
 			request.getSession().setAttribute("userFlag", true);
+			request.getSession().setAttribute("userType", "Teacher");
 			RequestDispatcher rd = request.getRequestDispatcher("teacherLanding.jsp");
 			rd.forward(request, response);
 		} else {

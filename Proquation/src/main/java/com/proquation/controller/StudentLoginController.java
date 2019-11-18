@@ -14,34 +14,47 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import com.proquation.bean.Student;
 import com.proquation.dao.StudentLoginDAO;
+
 @WebServlet("/studentlogin")
 public class StudentLoginController extends HttpServlet {
-    
-   private static final long serialVersionUID = 1L;
-   public StudentLoginController() {
-       super();
-   }
-    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-    	String username = request.getParameter("firstname");
-        String password = request.getParameter("password");
-        String message;
-        StudentLoginDAO login= new StudentLoginDAO();
-        Student student = login.ValidateStudent(username, password);
-       if(student != null) {
-           request.getSession().setAttribute("student", student);
-           request.getSession().setAttribute("username", username);
-           request.getSession().setAttribute("userFlag", true);
-           RequestDispatcher rd = request.getRequestDispatcher("studentLanding.jsp");
-           rd.forward(request, response);
-        }
-        else
-        {
-           message = "Login Failed!! Please check your crendentials";
-           request.setAttribute("errorMessage", message);
-           request.getRequestDispatcher("studentLogin.jsp").forward(request, response);
-        }
-    }
-    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        doGet(request, response);
-    }
+
+	private static final long serialVersionUID = 1L;
+
+	public StudentLoginController() {
+		super();
+	}
+
+	protected void doGet(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
+		String username = request.getParameter("firstname");
+		String password = request.getParameter("password");
+		String message;
+		StudentLoginDAO login = new StudentLoginDAO();
+		Student student = login.ValidateStudent(username, password);
+		if (student != null) {
+			String userType = (String) request.getSession().getAttribute("userType");
+			if (userType != null) {
+				if (userType.equals("Student")) {
+					request.getSession().removeAttribute("Student");
+				} else if (userType.equals("Teacher")) {
+					request.getSession().removeAttribute("Teacher");
+				}
+			}
+			request.getSession().setAttribute("student", student);
+			request.getSession().setAttribute("username", username);
+			request.getSession().setAttribute("userFlag", true);
+			request.getSession().setAttribute("userType", "Student");
+			RequestDispatcher rd = request.getRequestDispatcher("studentLanding.jsp");
+			rd.forward(request, response);
+		} else {
+			message = "Login Failed!! Please check your crendentials";
+			request.setAttribute("errorMessage", message);
+			request.getRequestDispatcher("studentLogin.jsp").forward(request, response);
+		}
+	}
+
+	protected void doPost(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
+		doGet(request, response);
+	}
 }

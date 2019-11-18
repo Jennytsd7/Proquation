@@ -2,6 +2,7 @@
 	Author: Raghavan
 	Version: 1.0
  -->
+<%@page import="java.util.Iterator"%>
 <%@page import="com.proquation.bean.Student"%>
 <%@page import="java.util.List"%>
 <%@page import="java.util.ArrayList"%>
@@ -13,15 +14,29 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Student List</title>
+<link rel="stylesheet" type="text/css"
+	href="/Proquation/css/studentList.css"/>
 </head>
 <body>
+<table>
+	<tr>
+		<th>Name</th>
+		<th>Grade</th>
+	</tr>
 <%
 	List<Student> studentlist = new ArrayList<Student>();
 	studentlist = (ArrayList<Student>)request.getAttribute("studentlist");
-	for(Student s: studentlist) {
-		out.println(s.getStudentName());
+	Iterator i = studentlist.listIterator();
+	while(i.hasNext()) {
+		Student nextStudent = (Student)i.next();
+		%>
+			<tr>
+				<td><%=nextStudent.getStudentName()%></td>
+				<td><%=nextStudent.getStudentGrade()%></td>
+			</tr>
+		<%
 	}
 %>
-
+</table>
 </body>
 </html>

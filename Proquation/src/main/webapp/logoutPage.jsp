@@ -14,6 +14,13 @@
 		if((String)request.getSession().getAttribute("username") != null) {
 			request.getSession().removeAttribute("username");
 			request.getSession().removeAttribute("userFlag");
+			String userType = (String)request.getSession().getAttribute("userType");
+			if(userType.equals("Student")) {
+				request.getSession().removeAttribute("Student");
+			}
+			else if(userType.equals("Teacher")) {
+				request.getSession().removeAttribute("Teacher");
+			}
 		}
 		try {
 			request.getRequestDispatcher("index.jsp").forward(request, response);	
