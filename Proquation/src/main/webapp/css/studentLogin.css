@@ -10,6 +10,23 @@
    font-family: 'Asap', sans-serif;
 }
 
+.student-reg-link {
+	text-decoration: none;
+	color: blue;
+}
+
+.student-reg-link:visited {
+	color: blue;
+}
+
+.student-reg-link:hover {
+	cursor: pointer;
+}
+
+h3, div {
+	font-family: 'Asap', sans-serif;
+}
+
 .bgimg{
 	position: relative;
 	background-attachment: fixed;
@@ -45,30 +62,6 @@
 
 body {
     display: block;
-}
-
-
-.header {
-  background-color: #412b3e;
-  text-align: left;
-  padding: 10px;
-}
-
-.logo{
-	height:60px;
-	width:auto;
-	border: 3px solid white;
-	border-radius:50%;
-	padding: 3px;
-	display: inline
-}
-
-.header > h1{
-	color:white;
-	font-family: asap, sans-serif;
-	display: inline-block;
-    margin-left: 15px;
-    text-transform: uppercase;
 }
 
 input[type=text], input[type=password], select, textarea {

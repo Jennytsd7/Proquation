@@ -1,0 +1,32 @@
+@CHARSET "ISO-8859-1";
+/** @author Raghavan
+ *  version 1.0
+ *  CSS file for Admin landing page
+ */
+.admin-landing-container {
+	display: flex;
+	align-items: center;
+    justify-content: center;
+    height: 400px;
+    position: relative;
+}
+
+.admin-landing-container section {
+	margin: auto 20px;
+	width: 30%;
+	text-align: center;
+	box-sizing: border-box;
+}
+
+.admin-landing-container section h1 {
+	text-align: center;
+	text-transform: uppercase;
+	font-family: asap, sans-serif;
+}
+
+.admin-landing-container section img {
+	height: 200px;
+	width: 200px;
+	border-radius: 50%;
+	cursor: pointer;
+}

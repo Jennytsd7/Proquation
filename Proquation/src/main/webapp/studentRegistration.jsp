@@ -1,29 +1,28 @@
+<!-- Author name: Swarnalatha Sreenigarajan
+Co-author name: Rahul Suresh, Raghavan Sreenivasa 
+Version 1.0
+-->
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+<%@include file="/header.jsp" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<!-- Author name: Swarnalatha Sreenigarajan
-Co-author name: Rahul Suresh, Raghavan Sreenivasa -->
 <meta charset="UTF-8">
 <title>Student Registration</title>
-<link rel="stylesheet" href="tempcss.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lobster">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel="stylesheet" type="text/css" href="/Proquation/css/studentViewPractice.css">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
-<link rel="stylesheet" type="text/css" href="/Proquation/css/studentLogin.css">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">	
+<link rel="stylesheet" type="text/css" href="/Proquation/css/studentLogin.css">	
 
 </head>
 <body class="bgimg">
-   <div class="header">
-        <img src="/Proquation/images/logo.jpg" alt="logo" class = "logo" />
-        <h1>Proquation</h1>
-   </div>
    <div align="center">
       <div class="container"  align="center">
-          <form action="studentregister" onsubmit="submitform()">
+          <form action="studentregister" onsubmit="return submitform()" method="post">
+          <%
+          	String errorMessage = (String)request.getAttribute("errorMessage");
+          	if(errorMessage != null) {
+          		out.println(errorMessage);
+          	}
+          %>
           	<h3> Sign Up </h3>
           	<div>
             	<label for="name">NAME</label>
@@ -50,10 +49,13 @@ Co-author name: Rahul Suresh, Raghavan Sreenivasa -->
 		  </form>
 		<script type="text/javascript">
        		function submitform(){
-            	if((document.getElementById('fname').value.length==0) || (document.getElementById('lname').value.length==0) ||(document.getElementById('Grade').value.length==0) )
-                	window.alert("Enter all details!");
+            	if((document.getElementById('fname').value.length==0) || (document.getElementById('uname').value.length==0) ||(document.getElementById('Grade').value.length==0) ) {
+            		window.alert("Enter all details!");
+            		return false;
+            	}
                 else
-                    window.alert("Welcome to Proquation!");
+                	window.alert("Success");
+                    return true;
                 }
   		</script>
 		</div>

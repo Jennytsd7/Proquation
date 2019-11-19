@@ -1,0 +1,35 @@
+/** @author Swarnalatha Srenigarajan
+ *  @co-author Janani Anand
+ *  version 1.1
+ *  CSS file for Student landing page
+ */
+@CHARSET "ISO-8859-1";
+@import url('https://fonts.googleapis.com/css?family=Asap:400,500,700&display=swap');
+
+.student-landing-container {
+	display: flex;
+	align-items: center;
+    justify-content: center;
+    height: 400px;
+    position: relative;
+}
+
+.student-landing-container section {
+	margin: auto 20px;
+	width: 30%;
+	text-align: center;
+	box-sizing: border-box;
+}
+
+.student-landing-container section h1 {
+	text-align: center;
+	text-transform: uppercase;
+	font-family: asap, sans-serif;
+}
+
+.student-landing-container section img {
+	height: 200px;
+	width: 200px;
+	border-radius: 50%;
+	cursor: pointer;
+} 
