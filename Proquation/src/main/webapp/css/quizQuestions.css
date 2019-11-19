@@ -1,35 +1,73 @@
-/** @author Janani Anand
+/** @author Raghavan
  *  version 1.0
  *  CSS file for quizQuestions page
  */
+@import url('https://fonts.googleapis.com/css?family=Asap:400,500,700&display=swap');
+form {
+    margin: 30px 30px 0 30px;
+    margin-top: 30px;
+    font-family: asap, sans-serif;
+    box-sizing: border-box;
+}
 
-body {
-	font-family: Arial;
+input {
+	box-sizing: border-box;
+	padding: 10px;
+	margin: 10px 0;
 }
-.tab {
-	overflow: hidden;
-	border: 1px solid #ccc;
-	background-color: #f1f1f1;
+
+.questionNumberLabel {
+	display: block;
+	float: left;
+	width: 100%;
 }
-.tab button {
-	background-color: inherit;
+
+.questionNumber {
+	float: left;
+	display: block;
+	width: 11%;
+}
+
+.questionLabel {
+	display: block;
+    width: 100%;
+    float: left;	
+}
+
+.question {
+	display: block;
+	width: 96%;
+	float: left;
+}
+
+.optionContainer {
+	display: block;
+	width: 47%;
+	float: left;
+	margin-right: 30px;
+}
+
+.optionLabel, .options {
+	display: block;
+	width: 100%;
+	float: left;
+}
+
+.button {
+	display: block;
 	float: left;
 	border: none;
-	outline: none;
-	cursor: pointer;
-	padding: 14px 16px;
-	transition: 0.3s;
-	font-size: 17px;
+	background: #008CBA;
+    color: #FFFFFF;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    cursor: pointer;
+    font-family: asap, sans-serif;
+    margin-top: 20px;
 }
-.tab button:hover {
-	background-color: #ddd;
-}
-.tab button.active {
-	background-color: #ccc;
-}
-.tabcontent {
-	display: none;
-	padding: 6px 12px;
-	border: 1px solid #ccc;
-	border-top: none;
+
+#continue {
+	margin-right: 20px;
 }
