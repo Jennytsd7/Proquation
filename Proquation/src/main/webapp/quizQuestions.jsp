@@ -10,11 +10,10 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link rel="stylesheet" type="text/css" href="/Proquation/css/quizQuestions.css"/>
-
+	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+	<link rel="stylesheet" type="text/css" href="/Proquation/css/quizQuestions.css"/>
 </head>
 <body>
-	<div class ="loadQuestions"></div>
 	<form action ="" onSubmit=submitform() method="post">
 		<label class="questionNumberLabel" for ="questionNumber">Question Number:</label> 
 			<input type="text"
