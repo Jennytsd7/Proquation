@@ -1,5 +1,5 @@
 <!-- 
-	Author: Raghavan
+	Author: Swarnalatha Srenigarajan
 	Version: 1.0
  -->
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
@@ -12,9 +12,10 @@
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 	<link rel="stylesheet" type="text/css" href="/Proquation/css/quizQuestions.css"/>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 </head>
 <body>
-	<form action ="" onSubmit=submitform() method="post">
+	<form action ="" method="post">
 		<label class="questionNumberLabel" for ="questionNumber">Question Number:</label> 
 			<input type="text"
 				class ="questionNumber" name="questionNumber" id="questionNumber"
@@ -52,13 +53,17 @@
 					placeholder="Enter option 4">
 		</div>
 		
-		<input class="button" id="continue" type="submit" value="Continue">
+		<label class="correctAnsLabel" for="correctAns">Correct Answer:</label>
+		<input type="text"
+					class="correctAns" name="correctAns" id="correctAns"
+					placeholder="Enter correct answer">
 		
-		<input class="button" id="submit "type="submit" value="Submit">
+		<input class="button" type="button" id="continueButton" value="Continue">
+		
+		<input class="button" type="button" id="submitButton" value="Submit">
 			
 	</form>
 	
 	<script type="text/javascript" src="/Proquation/js/quizQuestions.js" charset="utf-8"></script>
-
 </body>
 </html>

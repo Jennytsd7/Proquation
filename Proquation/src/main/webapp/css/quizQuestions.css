@@ -1,4 +1,4 @@
-/** @author Raghavan
+/** @author Swarnalatha Srenigarajan
  *  version 1.0
  *  CSS file for quizQuestions page
  */
@@ -53,6 +53,18 @@ input {
 	float: left;
 }
 
+.correctAnsLabel {
+	display: block;
+    width: 100%;
+    float: left;	
+}
+
+.correctAns {
+	display: block;
+	width: 96%;
+	float: left;
+}
+
 .button {
 	display: block;
 	float: left;
@@ -68,6 +80,6 @@ input {
     margin-top: 20px;
 }
 
-#continue {
+#continueButton {
 	margin-right: 20px;
 }
