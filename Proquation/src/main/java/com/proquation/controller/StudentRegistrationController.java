@@ -26,7 +26,6 @@ public class StudentRegistrationController extends HttpServlet {
     }
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		System.out.println("Inside student controller");
 		String name = request.getParameter("firstname");
 		String username = request.getParameter("username");
 		String grade = request.getParameter("grade");
@@ -34,12 +33,10 @@ public class StudentRegistrationController extends HttpServlet {
 		StudentUsernameSearch usernameSearch = new StudentUsernameSearch();
 		boolean usernameNotExists = usernameSearch.CheckUsernameExists(username);
 		if(usernameNotExists) {
-			System.out.println("Inside  username student controller");
 			StudentRegistrationDAO studentRegistrationDao = new StudentRegistrationDAO();
 			studentRegistrationDao.registerStudent(name, username, password, grade);
 		}
 		else{
-			System.out.println("Inside  username2 student controller");
 			String message = "Enter a different username";
 			request.setAttribute("errorMessage", message);
 			request.getRequestDispatcher("studentRegistration.jsp").forward(request, response);
@@ -49,7 +46,6 @@ public class StudentRegistrationController extends HttpServlet {
 		String message = "Student successfully added";
 		request.setAttribute("message", message);
 		RequestDispatcher rd = request.getRequestDispatcher("studentLogin.jsp");
-		System.out.println("Inside student controller end ");
 		rd.forward(request, response);
 		
 	}

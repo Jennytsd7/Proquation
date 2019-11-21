@@ -31,8 +31,11 @@ public class TeacherRegistrationController extends HttpServlet {
 		if (usernameNotExists) {
 			TeacherRegistrationDAO teacherRegistrationDao = new TeacherRegistrationDAO();
 			teacherRegistrationDao.registerTeacher(name, username, password, grade);
-		} else
-			response.sendRedirect("teacheLogin.jsp");
+		} else {
+			String message = "Enter a different username";
+			request.setAttribute("errorMessage", message);
+			request.getRequestDispatcher("teacherRegistration.jsp").forward(request, response);
+		}
 		String message = "Teacher successfully added";
 		request.setAttribute("message", message);
 		RequestDispatcher rd = request.getRequestDispatcher("teacherLogin.jsp");

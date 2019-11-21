@@ -49,7 +49,7 @@ function displayResult(strEval){
 
 function checkValidExpression(strCheck){
 	let lastElement = strCheck[strCheck.length - 1];
-	if(lastElement == '+' || lastElement == '-' || lastElement == '*' || lastElement == '/' || lastElement =='(' || isNaN(result)) 
+	if(lastElement == '+' || lastElement == '-' || lastElement == '*' || lastElement == '/' || lastElement =='(') 
 		return 'invalid';
 	else
 		return 'valid';

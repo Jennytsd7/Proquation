@@ -1,4 +1,4 @@
- // @author Janani Anand 
+ // @author Janani Anand, Raghavan
  // version 1 
  // To test the json data for given question
 
@@ -7,6 +7,10 @@ const submitButton = document.querySelector('#submit');
 
 next.addEventListener('click', () => {
 	loadQuestions();
+});
+
+submitButton.addEventListener('click', () => {
+	location.href = "/Proquation/studentLanding.jsp";
 });
 
 loadQuestions();
@@ -81,7 +85,12 @@ function loadQuestions(){
 	option4.value = currentQuestion['Option4'];
 	option4label.innerHTML = currentQuestion['Option4'];
 	
+	var questionsCount = sessionStorage.getItem('questionsCount');
 	questionsCount++;
-	sessionStorage.setItem('questionsCount', questionsCount);
+	sessionStorage.setItem('questionsCount', questionsCount);	
 	sessionStorage.removeItem('questions');
+	
+	if(questionsCount == Object.keys(questionsJson['Questions']).length) {
+		nextButton.classList.add('hide');
+	}
 }
