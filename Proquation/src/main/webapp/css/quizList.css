@@ -21,6 +21,14 @@ th,td {
   transition: all 0.3s;
 }
 
+.backbutton img{
+	height: 40px;
+	width: 40px;
+	border-radius: 50%;
+	margin-top:20px;
+	cursor: pointer;
+}
+
 th {
 	background: #666;
 	color: #FFF;
