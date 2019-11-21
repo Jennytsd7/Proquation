@@ -23,6 +23,7 @@ function removeLastfromEvalStr() {
 		evalStr = evalStr.slice(0, -1);
 	}
 	result = evaluate(evalStr);
+	
 	displayResult(evalStr);
 }
 
@@ -48,7 +49,7 @@ function displayResult(strEval){
 
 function checkValidExpression(strCheck){
 	let lastElement = strCheck[strCheck.length - 1];
-	if(lastElement == '+' || lastElement == '-' || lastElement == '*' || lastElement == '/')
+	if(lastElement == '+' || lastElement == '-' || lastElement == '*' || lastElement == '/' || lastElement =='(' || isNaN(result)) 
 		return 'invalid';
 	else
 		return 'valid';
