@@ -17,6 +17,11 @@
 	href="/Proquation/css/quizList.css"/>
 </head>
 <body>
+<div class="backbutton">
+		<a href="studentLanding.jsp">
+		 <img src="/Proquation/images/backButton.png" alt="back"/>
+		</a>
+	</div>
 <table>
 	<tr>
 		<th>Quiz List</th>
