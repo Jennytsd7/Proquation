@@ -1,4 +1,4 @@
-<!-- Author name: Janani Anand
+<!-- Author name: Janani Anand, Raghavan
 Version 1.0
 -->
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
@@ -12,7 +12,6 @@ Version 1.0
 </head>
 
 <body>
-
 <div class ="loadQuestions">
 
 <!--  For displaying the Question and Question number -->

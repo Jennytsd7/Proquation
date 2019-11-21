@@ -1,4 +1,8 @@
 @CHARSET "ISO-8859-1";
+/** @author Raghava, Rahul Suresh
+ *  version 1.0
+ *  CSS file for student list page
+ */
 table, td, th {
   border: 1px solid black;
   box-sizing: border-box;
