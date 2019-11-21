@@ -9,6 +9,15 @@ body {
 	font-family: asap, sans-serif;
 }
 
+.loadQuestions {
+	margin: 0 30px;
+	background: lightgray;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+}
+
 #questionNumber {
 	font-size: 18px;
 }
@@ -39,6 +48,7 @@ body {
     cursor: pointer;
     font-family: asap, sans-serif;
     margin-top: 20px;
+    width: 120px;
 }
 
 #next {
