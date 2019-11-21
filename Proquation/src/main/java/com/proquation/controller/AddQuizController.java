@@ -10,8 +10,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import com.proquation.bean.Teacher;
 import com.proquation.dao.AddQuizDAO;
-import com.proquation.dao.TeacherRegistrationDAO;
-import com.proquation.dao.TeacherUsernameSearchDAO;
+
 //Author name: Rahul Suresh
 
 @WebServlet("/addquiz")
