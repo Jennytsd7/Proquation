@@ -1,44 +1,60 @@
  // @author Janani Anand 
  // version 1 
  // To test the json data for given question
- 
-var quesData = {
-	"Questions": {
-		"0": {
-			"QuestionNumber": "1",
-			"Question": "what",
-			"Option1": "a",
-			"Option2": "b",
-			"Option3": "c",
-			"Option4": "d",
-			"CorrectAnswer": "d"
-		},
-		"1": {
-			"QuestionNumber": "2",
-			"Question": "how",
-			"Option1": "a",
-			"Option2": "b",
-			"Option3": "c",
-			"Option4": "d",
-			"CorrectAnswer": "c"
-		}
-	}
-}
+
+const nextButton = document.querySelector('#next');
+const submitButton = document.querySelector('#submit');
+
+next.addEventListener('click', () => {
+	loadQuestions();
+});
 
 loadQuestions();
 
 function loadQuestions(){
-	var questionJson = sessionStorage.getItem('questions');
+	var quesData = {
+			"Questions": {
+				"0": {
+					"QuestionNumber": "1",
+					"Question": "What is the sum of 7+5",
+					"Option1": "10",
+					"Option2": "11",
+					"Option3": "12",
+					"Option4": "9",
+					"CorrectAnswer": "12"
+				},
+				"1": {
+					"QuestionNumber": "2",
+					"Question": "Which of these adds upto 8",
+					"Option1": "4+4",
+					"Option2": "2+7",
+					"Option3": "5+4",
+					"Option4": "2+4",
+					"CorrectAnswer": "4+4"
+				},
+				"2": {
+					"QuestionNumber": "3",
+					"Question": "What is the sum of 5 cents and 1 dime",
+					"Option1": "10 cents",
+					"Option2": "13 cents",
+					"Option3": "11 cents",
+					"Option4": "15 cents",
+					"CorrectAnswer": "15 cents"
+				}
+			}
+		}
+	var questionsJson = sessionStorage.getItem('questions');
 	var questionsCount = sessionStorage.getItem('questionsCount');
-	if(questionJson == null) {
+	if(questionsJson == null && questionsCount == null) {
 		//questionsJson = document.querySelector(".questions").innerHTML;
+		sessionStorage.setItem('questions', questionsJson);
 		questionsCount = 0;
 	}
 	else
 		questionsJson = JSON.parse(sessionStorage.getItem('questions'));
 	
 	questionsJson = quesData;
-	
+	console.log(questionsJson);
 	var currentQuestion = questionsJson['Questions'][questionsCount];
 	
 	const questionNumber = document.getElementById('questionNumber');
@@ -64,7 +80,8 @@ function loadQuestions(){
 	option3label.innerHTML = currentQuestion['Option3'];
 	option4.value = currentQuestion['Option4'];
 	option4label.innerHTML = currentQuestion['Option4'];
-    	
-    console.log(questionsJson);
-    	
+	
+	questionsCount++;
+	sessionStorage.setItem('questionsCount', questionsCount);
+	sessionStorage.removeItem('questions');
 }

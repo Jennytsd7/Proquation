@@ -46,6 +46,9 @@ function evaluate(token) {
             values.push(val);
         }
         if(token[i] == ')') {
+        	if(ops.length==0){
+        		return NaN;
+        	}
             while(ops.length != 0 && ops[ops.length - 1] != '(') {
                 let val2 = values.pop();
                 let val1 = values.pop();
