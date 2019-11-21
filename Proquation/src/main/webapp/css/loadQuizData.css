@@ -1,0 +1,46 @@
+@CHARSET "UTF-8";
+/** @author Raghavan
+ *  @co-author Janani
+ *  version 1.0
+ *  CSS file for quizQuestions page
+ */
+@import url('https://fonts.googleapis.com/css?family=Asap:400,500,700&display=swap');
+body {
+	font-family: asap, sans-serif;
+}
+
+#questionNumber {
+	font-size: 18px;
+}
+
+#question {
+	font-size: 20px;
+}
+
+.radioContainer {
+	margin: 15px 0;
+}
+
+.optionLabel {
+	margin-left: 5px;
+	font-size: 18px;
+}
+
+.button {
+	display: block;
+	float: left;
+	border: none;
+	background: #008CBA;
+    color: #FFFFFF;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    cursor: pointer;
+    font-family: asap, sans-serif;
+    margin-top: 20px;
+}
+
+#next {
+	margin-right: 20px;
+}
