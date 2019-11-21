@@ -15,11 +15,13 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 </head>
 <body>
-	<form action ="" method="post">
+	<form action ="addquiz" onsubmit="submitButtonListener()" method="post">
+	
+	<input id="questions" name="questions" value="">
 		<label class="questionNumberLabel" for ="questionNumber">Question Number:</label> 
 			<input type="text"
 				class ="questionNumber" name="questionNumber" id="questionNumber"
-				placeholder="Enter question number">
+				placeholder="Enter question number" name="questionnumber">
 				
 		<label class="questionLabel" for ="question">Question:</label> 
 			<input type="text"
@@ -60,7 +62,7 @@
 		
 		<input class="button" type="button" id="continueButton" value="Continue">
 		
-		<input class="button" type="button" id="submitButton" value="Submit">
+		<input class="button" type="submit" id="submitButton" value="Submit">
 			
 	</form>
 	
