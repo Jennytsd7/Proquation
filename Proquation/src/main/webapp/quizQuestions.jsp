@@ -17,7 +17,7 @@
 <body>
 	<form action ="addquiz" onsubmit="submitButtonListener()" method="post">
 	
-	<input id="questions" name="questions" value="">
+	<input id="questions" name="questions" value="" type="hidden">
 		<label class="questionNumberLabel" for ="questionNumber">Question Number:</label> 
 			<input type="text"
 				class ="questionNumber" name="questionNumber" id="questionNumber"
