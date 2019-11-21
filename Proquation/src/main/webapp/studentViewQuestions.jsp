@@ -38,7 +38,7 @@ Version 1.0
 
 	<input type="button" class="button" id="next" value="Next">
 		
-	<input class="button" id="submit "type="submit" value="Submit">
+	<input class="button" id="submit" type="submit" value="Submit">
 
 </div>
 </body>
