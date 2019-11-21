@@ -26,6 +26,7 @@ document.addEventListener("drop", function(event) {
     event.preventDefault();
     if (event.target.className == "dragButtons") {
         let cloneButton = dragged.cloneNode(true);
+        cloneButton.removeAttribute('draggable');
         event.target.appendChild(cloneButton);
         updateStr(cloneButton.value);
     }

@@ -44,3 +44,7 @@ body {
 #next {
 	margin-right: 20px;
 }
+
+#next.hide {
+	display:none;
+}
