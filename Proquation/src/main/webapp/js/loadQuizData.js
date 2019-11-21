@@ -10,6 +10,7 @@ next.addEventListener('click', () => {
 });
 
 submitButton.addEventListener('click', () => {
+	sessionStorage.removeItem('questionsCount');
 	location.href = "/Proquation/studentLanding.jsp";
 });
 
@@ -77,12 +78,16 @@ function loadQuestions(){
 	questionNumber.innerHTML = "Question: " + currentQuestion['QuestionNumber'];
 	question.innerHTML = currentQuestion['Question'];
 	option1.value = currentQuestion['Option1'];
+	option1.checked = false;
 	option1label.innerHTML = currentQuestion['Option1'];
 	option2.value = currentQuestion['Option2'];
+	option2.checked = false;
 	option2label.innerHTML = currentQuestion['Option2'];
 	option3.value = currentQuestion['Option3'];
+	option3.checked = false;
 	option3label.innerHTML = currentQuestion['Option3'];
 	option4.value = currentQuestion['Option4'];
+	option4.checked = false;
 	option4label.innerHTML = currentQuestion['Option4'];
 	
 	var questionsCount = sessionStorage.getItem('questionsCount');
