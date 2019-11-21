@@ -5,7 +5,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 //Author name: Rahul Suresh
-public class TeacherUsernameSearch {
+public class TeacherUsernameSearchDAO {
 	public boolean CheckUsernameExists(String username) {
 		boolean flag = false;
 		String query = "select * from Teacher where teacher_username=?";
