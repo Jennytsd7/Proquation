@@ -10,7 +10,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import com.proquation.dao.TeacherRegistrationDAO;
-import com.proquation.dao.TeacherUsernameSearch;
+import com.proquation.dao.TeacherUsernameSearchDAO;
 //Author name: Rahul Suresh
 @WebServlet("/teacherregister")
 public class TeacherRegistrationController extends HttpServlet {
@@ -26,7 +26,7 @@ public class TeacherRegistrationController extends HttpServlet {
 		String username = request.getParameter("username");
 		String grade = request.getParameter("grade");
 		String password = request.getParameter("password");
-		TeacherUsernameSearch teacherUsernameSearch = new TeacherUsernameSearch();
+		TeacherUsernameSearchDAO teacherUsernameSearch = new TeacherUsernameSearchDAO();
 		boolean usernameNotExists = teacherUsernameSearch.CheckUsernameExists(username);
 		if (usernameNotExists) {
 			TeacherRegistrationDAO teacherRegistrationDao = new TeacherRegistrationDAO();

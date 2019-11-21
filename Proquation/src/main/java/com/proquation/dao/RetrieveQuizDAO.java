@@ -4,25 +4,31 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-//Author name: Rahul Suresh
-public class TeacherUsernameSearch {
-	public boolean CheckUsernameExists(String username) {
-		boolean flag = false;
-		String query = "select * from Teacher where teacher_username=?";
+import java.util.ArrayList;
+import java.util.List;
+
+//Author : Rahul Suresh
+
+public class RetrieveQuizDAO {
+
+	public List<String> GetQuizList(String student_grade) {
+		List<String> quizList = new ArrayList<String>();
+		String query = "SELECT quiz_data FROM proquation.Quiz where quiz_grade =?";
 		Connection connection = null;
 		PreparedStatement statement = null;
 		try {
 			connection = (Connection) DatabaseConnection.getDBConnectionInstance().getConnection();
 			statement = connection.prepareStatement(query);
-			statement.setString(1, username);
+			statement.setString(1, student_grade);
 			ResultSet rs = statement.executeQuery();
-			System.out.println(rs);
-			if(rs.next())
-				flag = false;
-			else
-				flag = true;
+			while (rs.next()) {
+				String quiz = rs.getString("quiz_data");
+				System.out.println(quiz);
+				if(quiz!= null)
+					quizList.add(quiz);
+			}
 		}
-		catch(Exception e) {
+		catch (Exception e) {
 			e.printStackTrace();
 		}
 		finally {
@@ -32,10 +38,9 @@ public class TeacherUsernameSearch {
 				if (connection != null)
 					connection.close();
 			} catch (SQLException e) {
-				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
 		}
-		return flag;
+		return quizList;
 	}
 }
