@@ -30,7 +30,7 @@
 		String quiz = (String)i.next();
 		%>
 			<tr>
-				<td><%="Quiz "+ count%></td>
+				<td><a href="/Proquation/studentViewQuestions.jsp"><%="Quiz "+ count%></a></td>
 			</tr>
 		<%
 		count++;
