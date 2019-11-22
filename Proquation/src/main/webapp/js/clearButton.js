@@ -13,15 +13,18 @@ clearButton.addEventListener("click", () => {
 		buttonsPanel.forEach((element) => {
 			sandbox.removeChild(element);
 			updateEvalStr('');
-			updateStr('');
+			
 		});
 	}
 });
 
 deleteButton.addEventListener("click", () => {
-	if(sandbox.children.length != 0) {
+	if(sandbox.children.length > 1) {
 		let buttonsPanel = sandbox.children;
 		sandbox.removeChild(buttonsPanel[buttonsPanel.length - 1]);
 		removeLastfromEvalStr();
+	}
+	else{
+		resultContainer.textContent = " ";
 	}
 });
