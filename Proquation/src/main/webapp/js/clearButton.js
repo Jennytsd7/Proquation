@@ -1,4 +1,4 @@
-/** @author Janani Anand, Raghavan Sreenivasa
+/** @author Janani Anand, Raghavan Sreenivasa, Swarnalatha Srenigarajan
  * 	version 1.2 
  *  The clearButton function clears all the buttons that were dragged into the sandbox panel
  * 
@@ -20,8 +20,13 @@ clearButton.addEventListener("click", () => {
 
 deleteButton.addEventListener("click", () => {
 	if(sandbox.children.length != 0) {
-		let buttonsPanel = sandbox.children;
-		sandbox.removeChild(buttonsPanel[buttonsPanel.length - 1]);
-		removeLastfromEvalStr();
+		if(sandbox.children.length > 1) {
+			let buttonsPanel = sandbox.children;
+			sandbox.removeChild(buttonsPanel[buttonsPanel.length - 1]);
+			removeLastfromEvalStr();
+		}
+		else{
+			resultContainer.textContent = " ";
+		}
 	}
 });
