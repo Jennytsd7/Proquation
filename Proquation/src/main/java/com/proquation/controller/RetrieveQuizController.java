@@ -15,6 +15,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import com.proquation.bean.Student;
+import com.proquation.bean.Teacher;
 import com.proquation.dao.RetrieveQuizDAO;
 
 @WebServlet("/retrievequiz")
@@ -27,14 +28,19 @@ public class RetrieveQuizController extends HttpServlet {
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		List<String> quizList = new ArrayList<String>();
-		Student student = (Student) request.getSession().getAttribute("student");
 		RetrieveQuizDAO retrievequizObj = new RetrieveQuizDAO();
-		quizList = retrievequizObj.GetQuizList(student.getStudentGrade());
-		for(String s :quizList ){
-			System.out.println(s);
+		if(request.getSession().getAttribute("student") != null) {
+			Student student = (Student) request.getSession().getAttribute("student");
+			quizList = retrievequizObj.GetQuizList(student.getStudentGrade());
+			request.setAttribute("quizList", quizList);
+			request.getRequestDispatcher("quizList.jsp").forward(request, response);
 		}
-		request.setAttribute("quizList", quizList);
-		request.getRequestDispatcher("quizList.jsp").forward(request, response);
+		else if(request.getSession().getAttribute("teacher") != null) {
+			Teacher teacher = (Teacher) request.getSession().getAttribute("teacher");
+			quizList = retrievequizObj.GetQuizList(teacher.getTeacherGrade());
+			request.setAttribute("quizList", quizList);
+			request.getRequestDispatcher("quizListTeacher.jsp").forward(request, response);
+		}
 	}
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		doGet(request, response);
