@@ -1,7 +1,7 @@
 
 
 /**
- * @author Swarnalatha Srenigarajan
+ * @author Swarnalatha Srenigarajan, Raghavan, Rahul Suresh
  * version 2
  * This function stores the values entered for
  * each question field and stores the values as a json
@@ -15,21 +15,19 @@ continueButton.addEventListener('click', ()=> {
 	location.reload();
 });
 
-submitButton.addEventListener('click', ()=> {
+function submitButtonListener() {
 	submitform();
-	var questionString = sessionStorage.getItem('questions');
+	pageLoad();
 	sessionStorage.removeItem('questions');
-	$.ajax({
-		type: "POST",
-		url: "/postquiz",
-		dataType: "json",
-		data: data,
-		contentType: "application/json; charset=utf-8",
-		success: function(result) {
-			alert(result);
-		},
-	});
-});
+}
+
+pageLoad();
+
+function pageLoad() {
+	const questionsDiv = document.getElementById('questions');
+	var questionsJson = sessionStorage.getItem('questions');
+	questionsDiv.value = JSON.stringify(questionsJson);
+}
 
 function submitform(){
 	var questionsJson = sessionStorage.getItem('questions');
@@ -38,8 +36,9 @@ function submitform(){
 		questionsJson = {"Questions":{}};
 		questionsCount = 0;
 	}
-	else
+	else {
 		questionsJson = JSON.parse(sessionStorage.getItem('questions'));
+	}
 	console.log(questionsJson);
 	const questionNumber = document.getElementById('questionNumber').value;
 	const question = document.getElementById('question').value;
@@ -52,14 +51,7 @@ function submitform(){
     	alert("Enter all the fields");
     }
     else {
-    	let questionToAdd = {"QuestionNumber": questionNumber,
-				"Question": question,
-				"Option1": option1,
-				"Option2": option2,
-				"Option3": option3,
-				"Option4": option4,
-				"CorrectAnswer": correctanswer
-				};
+    	let questionToAdd = {"QuestionNumber": questionNumber,"Question": question,"Option1": option1,"Option2": option2,"Option3": option3,"Option4": option4,"CorrectAnswer": correctanswer};
     	questionsJson["Questions"][questionsCount] = questionToAdd;
     	questionsCount++;
     	console.log(questionsJson["Questions"]);

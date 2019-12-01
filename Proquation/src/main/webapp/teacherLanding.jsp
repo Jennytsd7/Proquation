@@ -1,4 +1,4 @@
-<!-- Author name: Raghavan Sreenivasa 
+<!-- Author name: Raghavan Sreenivasa, Rahul Suresh
 Version 1.0
 -->
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
@@ -25,7 +25,7 @@ Version 1.0
 	<div class="teacher-landing-container">
 		<section class="teacher-quiz-section">
 			<h1>Post Quiz</h1>
-			<a href="postQuiz.jsp">
+			<a href="/Proquation/quizQuestions.jsp">
 				<img src="/Proquation/images/quiz-img.png" alt="student"/>
 			</a>
 		</section>

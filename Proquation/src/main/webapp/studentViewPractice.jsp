@@ -12,6 +12,11 @@ Co-author name: Janani Anand, Swarnalatha Sreenigarajan -->
 <%Student student = (Student) request.getSession().getAttribute("student");
 	String grade = student.getStudentGrade(); %>
 <body class="student-practice-body">
+	<div class="backbutton">
+		<a href="studentLanding.jsp">
+		 <img src="/Proquation/images/backButton.png" alt="back"/>
+		</a>
+	</div>
 	<div class="button-panel">
 		<div class="container">
 			<!-- <div class="section"> -->
