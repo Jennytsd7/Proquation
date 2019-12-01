@@ -26,13 +26,19 @@ Version 1.0
 		<section class="teacher-quiz-section">
 			<h1>Post Quiz</h1>
 			<a href="/Proquation/quizQuestions.jsp">
-				<img src="/Proquation/images/quiz-img.png" alt="student"/>
+				<img src="/Proquation/images/quiz-img.png" alt="teacher"/>
 			</a>
 		</section>
 		<section class="teacher-view-student-section">
 			<h1>View Students in Class</h1>
 			<a href="/Proquation/studentofteacher">
-				<img src="/Proquation/images/student-list.jpg" alt="student"/>
+				<img src="/Proquation/images/student-list.jpg" alt="teacher"/>
+			</a>
+		</section>
+		<section class="teacher-quiz-section">
+			<h1>View Quizzes Posted</h1>
+			<a href="/Proquation/retrievequiz">
+				<img src="/Proquation/images/quiz-img.png" alt="teacher"/>
 			</a>
 		</section>
 	</div>
