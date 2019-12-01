@@ -1,3 +1,6 @@
+/* Author name: Rahul Suresh
+ * Version 1.0
+ */
 package com.proquation.controller;
 
 import java.io.IOException;
@@ -14,8 +17,6 @@ import javax.servlet.http.HttpServletResponse;
 import com.proquation.bean.Student;
 import com.proquation.dao.RetrieveQuizDAO;
 
-
-// Author name: Rahul Suresh
 @WebServlet("/retrievequiz")
 public class RetrieveQuizController extends HttpServlet {
 	private static final long serialVersionUID = 1L;

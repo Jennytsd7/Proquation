@@ -1,3 +1,6 @@
+/* Author name: Rahul Suresh
+ * Version 1.0
+ */
 package com.proquation.dao;
 
 import java.sql.Connection;
@@ -6,8 +9,6 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
-
-//Author : Rahul Suresh
 
 public class RetrieveQuizDAO {
 
