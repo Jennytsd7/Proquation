@@ -12,8 +12,9 @@ Version 1.0
 </head>
 
 <body>
-<div class ="loadQuestions">
-
+<form class ="loadQuestions" action="gradequiz" onsubmit="submitQuiz()" method="post">
+	<input id="marks" name="marks" value="" type="hidden">
+	
 <!--  For displaying the Question and Question number -->
 	<p class="questionNumber" id="questionNumber"></p>	
 	<p class="question" id="question"></p>
@@ -39,7 +40,7 @@ Version 1.0
 		
 	<input class="button" id="submit" type="submit" value="Submit">
 
-</div>
+</form>
 </body>
 <script type="text/javascript" src="/Proquation/js/loadQuizData.js" charset="utf-8"></script>
 </html>

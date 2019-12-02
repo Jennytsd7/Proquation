@@ -58,3 +58,7 @@ body {
 #next.hide {
 	display:none;
 }
+
+.isDisabled {
+  cursor: not-allowed;
+}

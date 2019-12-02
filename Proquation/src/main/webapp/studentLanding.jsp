@@ -37,7 +37,12 @@
 				<img src="/Proquation/images/quiz-img.png" alt="student"/>
 			</a>
 		</section>
-		
+		<section class="student-quiz-section">
+			<h1>View Scores</h1>
+			<a href="/Proquation/studentViewScore">
+				<img src="/Proquation/images/quiz-score.jpg" alt="student"/>
+			</a>
+		</section>
 	</div>
 </body>
 </html> 
