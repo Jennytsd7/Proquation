@@ -12,7 +12,7 @@ import java.util.List;
 
 import com.proquation.bean.Quiz;
 
-public class StudentViewScoresDAO {
+public class StudentViewScoreDAO {
 	public List<Quiz> viewScores(String studentName) {
 		List<Quiz> quizList = new ArrayList<Quiz>();
 		String query = "SELECT * FROM proquation.quizdata where student_name =?";

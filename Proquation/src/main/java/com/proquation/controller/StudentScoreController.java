@@ -14,7 +14,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import com.proquation.bean.Quiz;
 import com.proquation.bean.Student;
-import com.proquation.dao.StudentViewScoresDAO;
+import com.proquation.dao.StudentViewScoreDAO;
 
 @WebServlet("/studentViewScore")
 public class StudentScoreController extends HttpServlet {
@@ -26,7 +26,7 @@ public class StudentScoreController extends HttpServlet {
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		Student student = (Student) request.getSession().getAttribute("student");
-		StudentViewScoresDAO studentViewScoresDAO = new StudentViewScoresDAO();
+		StudentViewScoreDAO studentViewScoresDAO = new StudentViewScoreDAO();
 		List<Quiz> quizScoreList = studentViewScoresDAO.viewScores(student.getStudentName());
 		request.setAttribute("quizScoreList", quizScoreList);
 		request.getRequestDispatcher("studentViewScore.jsp").forward(request, response);
