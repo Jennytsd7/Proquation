@@ -36,7 +36,7 @@ Version 1.0
 				<img src="/Proquation/images/student-list.jpg" alt="teacher"/>
 			</a>
 		</section>
-		<section class="student-quiz-section">
+		<section class="teacher-quiz-section">
 			<h1>View Scores</h1>
 			<a href="/Proquation/teacherViewScore">
 				<img src="/Proquation/images/quiz-score.jpg" alt="teacher"/>
