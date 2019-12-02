@@ -1,4 +1,6 @@
-//Author name: Swarnalatha Srenigarajan
+/* Author name: Swarnalatha Srenigarajan
+ * Version 1.0
+ */
 package com.proquation.dao;
 
 import java.sql.Connection;
