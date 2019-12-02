@@ -2,40 +2,34 @@ package com.proquation.dao;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
-import java.sql.ResultSet;
 import java.sql.SQLException;
-//Author name: Rahul Suresh
-public class TeacherUsernameSearch {
-	public boolean CheckUsernameExists(String username) {
-		boolean flag = false;
-		String query = "select * from Teacher where teacher_username=?";
+
+public class AddQuizMarksDAO {
+	public void saveQuizMarks(String studentName, String marks, String grade) {
+		String query = "insert into QuizData (student_name, quiz_marks, grade) values (?,?,?)";
 		Connection connection = null;
 		PreparedStatement statement = null;
 		try {
 			connection = (Connection) DatabaseConnection.getDBConnectionInstance().getConnection();
 			statement = connection.prepareStatement(query);
-			statement.setString(1, username);
-			ResultSet rs = statement.executeQuery();
-			System.out.println(rs);
-			if(rs.next())
-				flag = false;
-			else
-				flag = true;
+			statement.setString(1, studentName);
+			statement.setString(2, marks);
+			statement.setString(3, grade);
+			statement.execute();
 		}
 		catch(Exception e) {
 			e.printStackTrace();
 		}
 		finally {
 			try {
-				if (statement != null)
+				if(statement != null)
 					statement.close();
-				if (connection != null)
+				if(connection != null)
 					connection.close();
 			} catch (SQLException e) {
-				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
 		}
-		return flag;
+		
 	}
 }

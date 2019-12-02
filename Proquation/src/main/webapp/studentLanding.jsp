@@ -2,6 +2,7 @@
     pageEncoding="ISO-8859-1"%>
 <!-- Author name: Swarnalatha Srenigarajan -->
 <!-- Co-Author name: Janani Anand -->
+<!-- Co-Author name: Rahul Suresh -->
 <!-- version: 1.1 -->
 <%@page import="com.proquation.bean.Student"%>
 <%@include file="/header.jsp" %>
@@ -32,11 +33,16 @@
 		</section>
 		<section class="student-quiz-section">
 			<h1>Take a Quiz</h1>
-			<a href="takeQuiz.jsp">
+			<a href="/Proquation/retrievequiz">
 				<img src="/Proquation/images/quiz-img.png" alt="student"/>
 			</a>
 		</section>
-		
+		<section class="student-quiz-section">
+			<h1>View Scores</h1>
+			<a href="/Proquation/studentViewScore">
+				<img src="/Proquation/images/quiz-score.jpg" alt="student"/>
+			</a>
+		</section>
 	</div>
 </body>
 </html> 

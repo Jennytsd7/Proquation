@@ -1,9 +1,8 @@
 <!-- 
-	Author: Raghavan
+	Author: Rahul Suresh, Raghavan
 	Version: 1.0
  -->
 <%@page import="java.util.Iterator"%>
-<%@page import="com.proquation.bean.Student"%>
 <%@page import="java.util.List"%>
 <%@page import="java.util.ArrayList"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
@@ -13,33 +12,33 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Student List</title>
+<title>Quiz List</title>
 <link rel="stylesheet" type="text/css"
-	href="/Proquation/css/studentList.css"/>
+	href="/Proquation/css/quizList.css"/>
 </head>
 <body>
-<div class="backbutton">
+	<div class="backbutton">
 		<a href="teacherLanding.jsp">
 		 <img src="/Proquation/images/backButton.png" alt="back"/>
 		</a>
-</div>
+	</div>
 <table>
 	<tr>
-		<th>Name</th>
-		<th>Grade</th>
+		<th>Quiz List</th>
 	</tr>
 <%
-	List<Student> studentlist = new ArrayList<Student>();
-	studentlist = (ArrayList<Student>)request.getAttribute("studentlist");
-	Iterator i = studentlist.listIterator();
+	List<String> quizList = new ArrayList<String>();
+	quizList = (ArrayList<String>)request.getAttribute("quizList");
+	Iterator i = quizList.listIterator();
+	int count=1;
 	while(i.hasNext()) {
-		Student nextStudent = (Student)i.next();
+		String quiz = (String)i.next();
 		%>
 			<tr>
-				<td><%=nextStudent.getStudentName()%></td>
-				<td><%=nextStudent.getStudentGrade()%></td>
+				<td><%="Quiz "+ count%></td>
 			</tr>
 		<%
+		count++;
 	}
 %>
 </table>

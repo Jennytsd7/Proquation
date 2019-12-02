@@ -1,4 +1,4 @@
-/** @author Raghavan Sreenivasa
+/** @author Raghavan Sreenivasa, Swarnalatha Srenigarajan
  *  version 1.0
  *  This is to evaluate the expression created by the student
  */
@@ -30,7 +30,7 @@ function evaluate(token) {
     i = 0;
 
     while(i < token.length) {
-        if(token[i] == '') {
+        if(token[i] == " ") {
             i += 1;
             continue;
         }
@@ -46,6 +46,9 @@ function evaluate(token) {
             values.push(val);
         }
         if(token[i] == ')') {
+        	if(ops.length==0){
+        		return NaN;
+        	}
             while(ops.length != 0 && ops[ops.length - 1] != '(') {
                 let val2 = values.pop();
                 let val1 = values.pop();

@@ -1,4 +1,5 @@
-<!-- Author name: Raghavan Sreenivasa 
+<!-- Author name: Raghavan Sreenivasa
+   Co- Authors: Rahul Suresh, Janani Anand
 Version 1.0
 -->
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
@@ -25,14 +26,20 @@ Version 1.0
 	<div class="teacher-landing-container">
 		<section class="teacher-quiz-section">
 			<h1>Post Quiz</h1>
-			<a href="postQuiz.jsp">
-				<img src="/Proquation/images/quiz-img.png" alt="student"/>
+			<a href="/Proquation/quizQuestions.jsp">
+				<img src="/Proquation/images/quiz-img.png" alt="teacher"/>
 			</a>
 		</section>
 		<section class="teacher-view-student-section">
 			<h1>View Students in Class</h1>
 			<a href="/Proquation/studentofteacher">
-				<img src="/Proquation/images/student-list.jpg" alt="student"/>
+				<img src="/Proquation/images/student-list.jpg" alt="teacher"/>
+			</a>
+		</section>
+		<section class="teacher-quiz-section">
+			<h1>View Scores</h1>
+			<a href="/Proquation/teacherViewScore">
+				<img src="/Proquation/images/quiz-score.jpg" alt="teacher"/>
 			</a>
 		</section>
 	</div>

@@ -1,8 +1,4 @@
 @CHARSET "ISO-8859-1";
-/** @author Raghava, Rahul Suresh
- *  version 1.0
- *  CSS file for student list page
- */
 table, td, th {
   border: 1px solid black;
   box-sizing: border-box;
@@ -19,18 +15,18 @@ table {
   font-family: asap, sans-serif;
 }
 
+th,td {
+  border: 1px solid transparent;
+  height: 40px; 
+  transition: all 0.3s;
+}
+
 .backbutton img{
 	height: 40px;
 	width: 40px;
 	border-radius: 50%;
 	margin-top:20px;
 	cursor: pointer;
-}
-
-th,td {
-  border: 1px solid transparent;
-  height: 40px; 
-  transition: all 0.3s;
 }
 
 th {

@@ -1,11 +1,9 @@
-<!-- 
-	Author: Raghavan
-	Version: 1.0
- -->
+<!-- Author name: Janani Anand
+Version 1.0 -->
 <%@page import="java.util.Iterator"%>
-<%@page import="com.proquation.bean.Student"%>
-<%@page import="java.util.List"%>
+<%@page import="com.proquation.bean.Quiz"%>
 <%@page import="java.util.ArrayList"%>
+<%@page import="java.util.List"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
 <%@include file="/header.jsp" %>
@@ -13,31 +11,31 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Student List</title>
+<title>View Scores</title>
 <link rel="stylesheet" type="text/css"
-	href="/Proquation/css/studentList.css"/>
+	href="/Proquation/css/quizList.css"/>
 </head>
 <body>
-<div class="backbutton">
+	<div class="backbutton">
 		<a href="teacherLanding.jsp">
 		 <img src="/Proquation/images/backButton.png" alt="back"/>
 		</a>
-</div>
-<table>
+	</div>
+	<table>
 	<tr>
-		<th>Name</th>
-		<th>Grade</th>
+		<th>Student Name</th>
+		<th>Marks</th>
 	</tr>
 <%
-	List<Student> studentlist = new ArrayList<Student>();
-	studentlist = (ArrayList<Student>)request.getAttribute("studentlist");
-	Iterator i = studentlist.listIterator();
+	List<Quiz> quizScoreList = new ArrayList<Quiz>();
+	quizScoreList = (ArrayList<Quiz>)request.getAttribute("quizScoreList");
+	Iterator i = quizScoreList.listIterator();
 	while(i.hasNext()) {
-		Student nextStudent = (Student)i.next();
+		Quiz quiz = (Quiz)i.next();
 		%>
 			<tr>
-				<td><%=nextStudent.getStudentName()%></td>
-				<td><%=nextStudent.getStudentGrade()%></td>
+				<td><%=quiz.getStudentName() %></td>
+				<td><%=quiz.getMarks() %></td>
 			</tr>
 		<%
 	}
