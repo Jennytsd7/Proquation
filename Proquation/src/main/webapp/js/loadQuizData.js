@@ -22,7 +22,8 @@ next.addEventListener('click', () => {
 
 function submitQuiz() {
 	gradeQuiz();
-	sessionStorage.removeItem('questionsCount');
+	sessionStorage.removeItem('questionsCountStudent');
+	sessionStorage.removeItem('questions');
 	sessionStorage.removeItem('marks');
 	document.querySelector('#marks').value = marksScored;
 }
@@ -34,12 +35,12 @@ function loadQuestions(){
 			"Questions": {
 				"0": {
 					"QuestionNumber": "1",
-					"Question": "What is the sum of 7+5",
+					"Question": "7+5",
 					"Option1": "10",
 					"Option2": "11",
 					"Option3": "12",
 					"Option4": "9",
-					"CorrectAnswer": "12"
+					"CorrectAnswer":"12"
 				},
 				"1": {
 					"QuestionNumber": "2",
@@ -52,17 +53,17 @@ function loadQuestions(){
 				},
 				"2": {
 					"QuestionNumber": "3",
-					"Question": "What is the sum of 5 cents and 1 dime",
-					"Option1": "10 cents",
-					"Option2": "13 cents",
-					"Option3": "11 cents",
-					"Option4": "15 cents",
-					"CorrectAnswer": "15 cents"
+					"Question": "What is the sum of 5 and 1",
+					"Option1": "10",
+					"Option2": "13",
+					"Option3": "11",
+					"Option4": "6",
+					"CorrectAnswer": "6"
 				}
 			}
 		}
 	var questionsJson = sessionStorage.getItem('questions');
-	var questionsCount = sessionStorage.getItem('questionsCount');
+	var questionsCount = sessionStorage.getItem('questionsCountStudent');
 	if(questionsJson == null && questionsCount == null) {
 		//questionsJson = document.querySelector(".questions").innerHTML;
 		sessionStorage.setItem('questions', questionsJson);
@@ -105,9 +106,9 @@ function loadQuestions(){
 	option4.checked = false;
 	option4label.innerHTML = currentQuestion['Option4'];
 	
-	var questionsCount = sessionStorage.getItem('questionsCount');
+	var questionsCount = sessionStorage.getItem('questionsCountStudent');
 	questionsCount++;
-	sessionStorage.setItem('questionsCount', questionsCount);	
+	sessionStorage.setItem('questionsCountStudent', questionsCount);	
 	sessionStorage.removeItem('questions');
 				
 	if(questionsCount == Object.keys(questionsJson['Questions']).length) {

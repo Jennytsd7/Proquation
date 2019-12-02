@@ -19,6 +19,7 @@ function submitButtonListener() {
 	submitform();
 	pageLoad();
 	sessionStorage.removeItem('questions');
+	sessionStorage.removeItem('questionsCount');
 }
 
 pageLoad();
