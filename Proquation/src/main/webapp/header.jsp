@@ -31,7 +31,7 @@
 <body>
 	<div class="header">
 		<div class="header-logo">
-			<a href="/Proquation">
+			<a class="homeLink" href="/Proquation">
         		<img src="/Proquation/images/logo.jpg" alt="logo" class = "logo"/>
         		<h1 class="title">Proquation</h1>
         	</a>

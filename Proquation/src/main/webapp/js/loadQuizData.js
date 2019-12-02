@@ -1,18 +1,31 @@
- // @author Janani Anand, Raghavan
- // version 1 
- // To test the json data for given question
-
+/* @author Janani Anand, Raghavan
+	Version 1 
+	To test the json data for given question
+*/
 const nextButton = document.querySelector('#next');
 const submitButton = document.querySelector('#submit');
+var correctAns;
+var marksScored;
 
 next.addEventListener('click', () => {
+	gradeQuiz();
 	loadQuestions();
 });
 
-submitButton.addEventListener('click', () => {
+//submitButton.addEventListener('click', () => {
+//	gradeQuiz();
+//	sessionStorage.removeItem('questionsCount');
+//	sessionStorage.removeItem('marks');
+//	document.querySelector('#marks').value = marksScored; 
+//	//location.href = "/Proquation/studentLanding.jsp";
+//});
+
+function submitQuiz() {
+	gradeQuiz();
 	sessionStorage.removeItem('questionsCount');
-	location.href = "/Proquation/studentLanding.jsp";
-});
+	sessionStorage.removeItem('marks');
+	document.querySelector('#marks').value = marksScored;
+}
 
 loadQuestions();
 
@@ -59,7 +72,6 @@ function loadQuestions(){
 		questionsJson = JSON.parse(sessionStorage.getItem('questions'));
 	
 	questionsJson = quesData;
-	console.log(questionsJson);
 	var currentQuestion = questionsJson['Questions'][questionsCount];
 	
 	const questionNumber = document.getElementById('questionNumber');
@@ -74,7 +86,10 @@ function loadQuestions(){
 	const option4label = document.getElementById('option4label');
 	
 	const correctanswer = currentQuestion['CorrectAnswer'];
-	
+	sessionStorage.removeItem('correctAns');
+	sessionStorage.setItem('correctAns', correctanswer);
+	correctAns = sessionStorage.getItem('correctAns');
+		
 	questionNumber.innerHTML = "Question: " + currentQuestion['QuestionNumber'];
 	question.innerHTML = currentQuestion['Question'];
 	option1.value = currentQuestion['Option1'];
@@ -94,8 +109,23 @@ function loadQuestions(){
 	questionsCount++;
 	sessionStorage.setItem('questionsCount', questionsCount);	
 	sessionStorage.removeItem('questions');
-	
+				
 	if(questionsCount == Object.keys(questionsJson['Questions']).length) {
 		nextButton.classList.add('hide');
+	}
+}
+
+function gradeQuiz() {
+	var marks = sessionStorage.getItem('marks');
+	if(marks == null)
+		marks = 0;
+	if(document.querySelector('input[name="options"]:checked')) {
+		if(correctAns == document.querySelector('input[name="options"]:checked').value){
+			marks++;
+			marksScored = marks;
+			sessionStorage.removeItem('marks');
+			sessionStorage.setItem('marks', marks);	
+			console.log(marks);
+		}
 	}
 }
