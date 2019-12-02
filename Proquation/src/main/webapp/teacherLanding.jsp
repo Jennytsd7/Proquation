@@ -1,4 +1,5 @@
-<!-- Author name: Raghavan Sreenivasa, Rahul Suresh
+<!-- Author name: Raghavan Sreenivasa
+   Co- Authors: Rahul Suresh, Janani Anand
 Version 1.0
 -->
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
@@ -36,9 +37,9 @@ Version 1.0
 			</a>
 		</section>
 		<section class="teacher-quiz-section">
-			<h1>View Quizzes Posted</h1>
-			<a href="/Proquation/retrievequiz">
-				<img src="/Proquation/images/quiz-img.png" alt="teacher"/>
+			<h1>View Scores</h1>
+			<a href="/Proquation/teacherViewScore">
+				<img src="/Proquation/images/quiz-score.jpg" alt="teacher"/>
 			</a>
 		</section>
 	</div>
